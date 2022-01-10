@@ -1,0 +1,14 @@
+.nav {
+  @include flex(row, no-wrap, space-around, center);
+  &__logo {
+    &-img {
+      width: 30px;
+    }
+  }
+}
+
+@include medium {
+}
+
+@include large {
+}

@@ -6,6 +6,12 @@
 
 //UTILS
 @import './assets/styles/scss/utils/responsive';
+@import './assets/styles/scss/utils/flex';
+
+//SHARED
+@import './assets/styles/scss/shared/components/header-nav';
+@import './assets/styles/scss/shared/components/side-bar';
+@import './assets/styles/scss/shared/components/footer'
 
 
 
