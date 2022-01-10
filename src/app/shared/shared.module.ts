@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { HeaderNavComponent } from './components/header-nav/header-nav.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { SideBarComponent } from './components/side-bar/side-bar.component';
+import { CoreModule } from '../core/core.module';
 
 
 
@@ -13,7 +14,8 @@ import { SideBarComponent } from './components/side-bar/side-bar.component';
     SideBarComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    CoreModule
   ],
 
   exports: [

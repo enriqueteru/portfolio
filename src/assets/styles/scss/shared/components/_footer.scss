@@ -1,0 +1,41 @@
+.footer {
+  @include flex(column, no-wrap, space-between, center);
+  padding:  $x8 0 ;
+  color: white;
+  background-color: rgb(24, 23, 23);
+  height: auto;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+
+  &__col1, &__col2, &__col3{
+    width: 80%;
+    margin: 20px 0;
+    color: rgb(211, 211, 211);
+    font-weight: 100;
+  }
+
+  &__col {
+    &-item {
+      padding: $x3 0;
+    }
+  }
+}
+
+@include medium {
+  .footer {
+    @include flex(row, no-wrap, space-around, center );
+
+
+    &__col1, &__col2, &__col3{
+      width: 20%;
+      margin: 20px 0 ;
+      color: rgb(211, 211, 211);
+      font-weight: 100;
+    }
+
+
+  }
+
+
+}

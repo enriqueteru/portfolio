@@ -1,3 +1,4 @@
+
 //RESET
 @import './assets/styles/scss/utils/reset';
 
@@ -10,11 +11,15 @@
 //UTILS
 @import './assets/styles/scss/utils/responsive';
 @import './assets/styles/scss/utils/flex';
+@import './assets/styles/scss/utils/img-edit';
 
 //SHARED
 @import './assets/styles/scss/shared/components/header-nav';
 @import './assets/styles/scss/shared/components/side-bar';
-@import './assets/styles/scss/shared/components/footer'
+@import './assets/styles/scss/shared/components/footer';
+
+//MATERIAL
+@import './assets/styles/scss/material-custom-theme/mat-custom-theme';
 
 
 
