@@ -1,8 +1,24 @@
 .nav {
-  @include flex(row, no-wrap, space-around, center);
+  padding: $x4;
+  margin-bottom: $x4;
+  box-shadow: rgba(0, 0, 0, 0.03 ) 0px 5px 30px 0px;
+  position: sticky;
+  @include flex(row, no-wrap, space-between, center);
   &__logo {
     &-img {
-      width: 30px;
+      width: $x4;
+    }
+  }
+
+  &__list {
+
+    &-item {
+      margin: 0 $unit;
+      text-decoration: none;
+      color: black;
+      &:hover{
+        color: black
+      }
     }
   }
 }
