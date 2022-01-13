@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, } from '@angular/core';
 
 @Component({
   selector: 'app-side-bar',
@@ -6,9 +6,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SideBarComponent implements OnInit {
 
+  //public isOpen?: boolean;
+  public isOpen: boolean = false;
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+
+
+ Open(value: boolean){
+   console.log(value)
+ }
+
+
+  Close(){
+    this.isOpen = !this.isOpen;
+    console.log(this.isOpen)
   }
 
 }

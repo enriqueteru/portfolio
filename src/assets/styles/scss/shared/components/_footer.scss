@@ -1,14 +1,22 @@
-.footer {
+.container {
   @include flex(column, no-wrap, space-between, center);
-  padding:  $x8 0 ;
-  color: white;
-  background-color: rgb(24, 23, 23);
-  height: auto;
-  position: absolute;
-  bottom: 0;
-  width: 100%;
+  max-width: 1920px;
 
-  &__col1, &__col2, &__col3{
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  padding: $x3 0;
+  color: white;
+  background-color: rgb(0, 0, 0);
+  height: auto;
+  display: block;
+  bottom: 0;
+
+  &__col1,
+  &__col2,
+  &__col3 {
     width: 80%;
     margin: 20px 0;
     color: rgb(211, 211, 211);
@@ -24,18 +32,20 @@
 
 @include medium {
   .footer {
-    @include flex(row, no-wrap, space-around, center );
+    margin-top: 0px;
+    padding: $x5 $x10;
 
-
-    &__col1, &__col2, &__col3{
-      width: 20%;
-      margin: 20px 0 ;
+    &__col1,
+    &__col2,
+    &__col3 {
+      width: 15%;
       color: rgb(211, 211, 211);
       font-weight: 100;
     }
-
-
   }
 
-
+  .container {
+    width: 100%;
+    @include flex(row, no-wrap, space-between, center);
+  }
 }

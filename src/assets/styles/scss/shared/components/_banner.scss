@@ -1,0 +1,30 @@
+.banner {
+  @include flex(column, no-wrap, center, center);
+  position: relative;
+  margin-top: -120px;
+  width: auto;
+  height: 60vh;
+  background: linear-gradient(to bottom, #000000cc, #000000d5),
+    url(https://images.unsplash.com/photo-1532423622396-10a3f979251a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80)
+      no-repeat top center;
+  &__text {
+    position: absolute;
+    top: 35%;
+    width: 80%;
+    color: white;
+    text-align: center;
+  }
+}
+
+@include medium {
+  .banner {
+    height: 100vh;
+    &__text {
+      position: absolute;
+      top: 42%;
+      width: 60%;
+
+      color: white;
+    }
+  }
+}

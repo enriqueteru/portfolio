@@ -1,5 +1,91 @@
-//ROBOTO FONT
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
-*{
-  font-family: 'Roboto', sans-serif;
+@mixin small {
+  @media only screen and (min-width: 600px) {
+    @content;
+  }
+}
+
+@mixin medium {
+  @media only screen and (min-width: 1024px) {
+    @content;
+  }
+}
+
+@mixin large {
+  @media only screen and (min-width: 1440px) {
+    @content;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin-bottom: $x4;
+}
+
+
+h1 {
+  font-family: "Mixta Ess Sharp", serif;
+  font-size: 9vw;
+  line-height: 9vw;
+}
+
+h2 {
+  font-family: "Mixta Ess Sharp", serif;
+  font-size: 8vw;
+}
+
+h3 {
+  font-family: "Mixta Ess Sharp", serif;
+  font-size: 8vw;
+}
+
+h4,
+h5 {
+  font-family: "Roboto", sans-serif;
+  font-size: 4vw;
+}
+
+p,a {
+  font-family: "Roboto", sans-serif;
+  font-weight: 100;
+  font-size: 4vw;
+  line-height: 4vw;
+}
+
+
+
+
+
+@include medium {
+  h1 {
+    font-family: "Mixta Ess Sharp", serif;
+    font-size: 5vw;
+    line-height: 4vw;
+  }
+
+  h2 {
+    font-family: "Mixta Ess Sharp", serif;
+    font-size: 5vw;
+  }
+
+  h3 {
+    font-family: "Mixta Ess Sharp", serif;
+    font-size: 5vw;
+  }
+
+  h4,
+  h5 {
+    font-family: "Roboto", sans-serif;
+    font-size: 5vw;
+  }
+
+  p, a{
+    font-family: "Roboto", sans-serif;
+    font-weight: 100;
+    font-size: 1.8vw;
+    line-height: 2.3vw;
+  }
+
 }

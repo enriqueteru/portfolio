@@ -1,0 +1,60 @@
+.container_nav {
+  @include flex(row, no-wrap, space-between, center);
+  max-width: 1920px;
+}
+
+.nav {
+  z-index: 2;
+background-color: transparent;
+  padding:  $x3 $x5;
+  margin-bottom: $x4;
+  position: sticky;
+  &__logo {
+    &-img {
+      width: $x3;
+    }
+  }
+
+  &__list {
+   display: none;
+  }
+  &__burger {
+    display: block;
+  }
+}
+
+@include medium {
+
+  .container_nav {
+    @include flex(row, no-wrap, space-between, center);
+  }
+
+  .nav {
+    padding:  $x3 $x10;
+    &__logo {
+      &-img {
+        width: $x4;
+      }
+    }
+
+    &__list {
+      display: block;
+      &-item {
+        margin: 0 $x3;
+        text-decoration: none;
+        color: rgba(255, 255, 255, 0.7);
+        font-weight: 100;
+        &:hover {
+          color: white;
+
+        }
+      }
+    }
+    &__burger {
+      display: none;
+    }
+  }
+}
+
+@include large {
+}

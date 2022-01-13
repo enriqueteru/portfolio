@@ -12,9 +12,12 @@
 @import './assets/styles/scss/utils/responsive';
 @import './assets/styles/scss/utils/flex';
 @import './assets/styles/scss/utils/img-edit';
+@import './assets/styles/scss/utils/font_asset';
 
 //SHARED
+@import './assets/styles/scss/shared/components/banner';
 @import './assets/styles/scss/shared/components/header-nav';
+@import './assets/styles/scss/shared/components/header-nav_transparent';
 @import './assets/styles/scss/shared/components/side-bar';
 @import './assets/styles/scss/shared/components/footer';
 
