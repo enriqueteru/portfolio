@@ -9,6 +9,7 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 import { MatSliderModule } from '@angular/material/slider';
+import {MatGridListModule} from '@angular/material/grid-list';
 
 
 
@@ -24,6 +25,8 @@ import { MatSliderModule } from '@angular/material/slider';
     MatIconModule,
     MatCardModule,
     MatSliderModule,
+    MatGridListModule
+
 
   ],
 
@@ -35,6 +38,7 @@ import { MatSliderModule } from '@angular/material/slider';
     MatIconModule,
     MatCardModule,
     MatSliderModule,
+    MatGridListModule
 
   ]
 })

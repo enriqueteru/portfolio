@@ -5,6 +5,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { SideBarComponent } from './components/side-bar/side-bar.component';
 import { CoreModule } from '../core/core.module';
 import { BannerComponent } from './components/banner/banner.component';
+import { GridProyectComponent } from './components/grid-proyect/grid-proyect.component';
 
 
 
@@ -13,7 +14,8 @@ import { BannerComponent } from './components/banner/banner.component';
     HeaderNavComponent,
     FooterComponent,
     SideBarComponent,
-    BannerComponent
+    BannerComponent,
+    GridProyectComponent
   ],
   imports: [
     CommonModule,
@@ -24,7 +26,8 @@ import { BannerComponent } from './components/banner/banner.component';
     HeaderNavComponent,
     FooterComponent,
     SideBarComponent,
-    BannerComponent
+    BannerComponent,
+    GridProyectComponent
 
   ]
 })

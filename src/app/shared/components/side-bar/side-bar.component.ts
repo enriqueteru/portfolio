@@ -7,7 +7,7 @@ import { Component, OnInit, } from '@angular/core';
 export class SideBarComponent implements OnInit {
 
   //public isOpen?: boolean;
-  public isOpen: boolean = false;
+  public isOpen: boolean = true;
 
   constructor() { }
 

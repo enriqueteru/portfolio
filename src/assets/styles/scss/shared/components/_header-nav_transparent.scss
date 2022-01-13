@@ -5,9 +5,8 @@
 
 .nav {
   z-index: 2;
-background-color: transparent;
-  padding:  $x3 $x5;
-  margin-bottom: $x4;
+  background-color: transparent;
+  padding: $x3 $x5;
   position: sticky;
   &__logo {
     &-img {
@@ -16,7 +15,7 @@ background-color: transparent;
   }
 
   &__list {
-   display: none;
+    display: none;
   }
   &__burger {
     display: block;
@@ -24,13 +23,13 @@ background-color: transparent;
 }
 
 @include medium {
-
   .container_nav {
     @include flex(row, no-wrap, space-between, center);
   }
 
   .nav {
-    padding:  $x3 $x10;
+    margin: $x3 0 0 0;
+    padding: $x3 $x10;
     &__logo {
       &-img {
         width: $x4;
@@ -46,7 +45,6 @@ background-color: transparent;
         font-weight: 100;
         &:hover {
           color: white;
-
         }
       }
     }
