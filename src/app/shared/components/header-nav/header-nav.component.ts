@@ -1,22 +1,12 @@
-import { Component, OnInit, Output, EventEmitter} from '@angular/core';
+import { Component} from '@angular/core';
+
 
 @Component({
   selector: 'app-header-nav',
-  templateUrl: './header-nav.component.html'
+  templateUrl: './header-nav.component.html',
 })
-export class HeaderNavComponent implements OnInit {
-  @Output()
-  OpenMenu = new EventEmitter<Boolean>();
+export class HeaderNavComponent {
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
- menuOpener(value: boolean){
-   this.OpenMenu.emit(value),
-   console.log(value)
- }
 
 
 }

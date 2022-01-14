@@ -1,13 +1,13 @@
 
-<div  class="side-bar" *ngIf="this.isOpen">
+<div   class="side-bar" *ngIf="this.isOpen">
   <div class="side-bar__close"> <mat-icon class="side-bar__ico" (click)="this.Close()"    aria-hidden="false">close</mat-icon>
   </div>
   <div class="side-bar__relative">
     <div class="side-bar__list">
-      <a class="side-bar__list-item" href="#">Clientes</a>
-      <a class="side-bar__list-item" href="#">Sobre mi</a>
-      <a class="side-bar__list-item" href="#">Blog</a>
-      <a class="side-bar__list-item" href="#">Contacto</a>
+      <a class="side-bar__list-item" routerLink="/casos">Clientes</a>
+      <a class="side-bar__list-item" routerLink="/sobre-mi">Sobre mi</a>
+      <a class="side-bar__list-item" routerLink="/blog">Blog</a>
+      <a class="side-bar__list-item" routerLink="/contacto">Contacto</a>
     </div>
   </div>
 </div>

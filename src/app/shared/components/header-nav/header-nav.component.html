@@ -10,15 +10,15 @@
 
     <div class="">
       <div class="nav__list">
-        <a class="nav__list-item" href="#">Casos</a>
-        <a class="nav__list-item" href="#">Sobre mi</a>
-        <a class="nav__list-item" href="#">Blog</a>
-        <a class="nav__list-item" href="#">Contacto</a>
+        <a class="nav__list-item" routerLink="/casos" routerLinkActive="router-link-active" >Casos</a>
+        <a class="nav__list-item" routerLink="/sobre-mi" routerLinkActive="router-link-active" >Sobre mi</a>
+        <a class="nav__list-item" routerLink="/blog" routerLinkActive="router-link-active" >Blog</a>
+        <a class="nav__list-item" routerLink="/contacto" routerLinkActive="router-link-active" >Contacto</a>
       </div>
 
-      <div (click)="this.menuOpener(true)" class="nav__burger">
+      <div class="nav__burger">
         <a
-          ><svg fill="white" viewBox="0 0 100 80" width="25" height="25">
+          ><svg  fill="white" viewBox="0 0 100 80" width="25" height="25">
             <rect width="100" height="8"></rect>
             <rect y="30" width="100" height="8"></rect>
             <rect y="60" width="100" height="8"></rect>

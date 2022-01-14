@@ -13,10 +13,12 @@ export interface Tile {
 })
 export class GridProyectComponent implements OnInit {
   tiles: Tile[] = [
-    {text: 'One', cols: 3, rows: 1, color: 'lightblue'},
-    {text: 'Two', cols: 1, rows: 2, color: 'lightgreen'},
-    {text: 'Three', cols: 1, rows: 1, color: 'lightpink'},
-    {text: 'Four', cols: 2, rows: 1, color: '#DDBDF1'},
+    {text: '1', cols: 4, rows: 4, color: 'lightblue'},
+    {text: '2', cols: 2, rows: 4, color: 'lightgreen'},
+    {text: '4', cols: 2, rows: 4, color: 'lightpink'},
+    {text: '4', cols: 2, rows: 4, color: '#DDBDF1'},
+    {text: '5', cols: 2, rows: 4, color: '#DDBDF1'},
+    {text: '6', cols: 4, rows: 4, color: '#blue'},
   ];
   constructor() { }
 

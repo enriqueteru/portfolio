@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { CoreModule } from './core/core.module';
 import { ModulesModule } from './modules/modules.module';
 import { SharedModule } from './shared/shared.module';
+import { PagesModule} from './pages/pages.module';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
@@ -18,6 +19,7 @@ import { NoopAnimationsModule } from '@angular/platform-browser/animations';
     CoreModule,
     ModulesModule,
     SharedModule,
+    PagesModule,
     NoopAnimationsModule
   ],
   exports:[

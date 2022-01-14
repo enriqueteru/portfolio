@@ -6,6 +6,7 @@ import { SideBarComponent } from './components/side-bar/side-bar.component';
 import { CoreModule } from '../core/core.module';
 import { BannerComponent } from './components/banner/banner.component';
 import { GridProyectComponent } from './components/grid-proyect/grid-proyect.component';
+import { RouterModule } from '@angular/router';
 
 
 
@@ -19,7 +20,8 @@ import { GridProyectComponent } from './components/grid-proyect/grid-proyect.com
   ],
   imports: [
     CommonModule,
-    CoreModule
+    CoreModule,
+    RouterModule
   ],
 
   exports: [
