@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class BlogComponent implements OnInit {
   public title: string = "Blog"
   public description: string = "Aquí escribo sobre ideas y grandes avances en el sector ¿Qué somos más que ideas y sueños?"
-  public background: string = "#ffd60a"
+  public background: string = "#FF9505"
   public fontColor: string = ""
   constructor() { }
 

@@ -6,6 +6,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { BlogComponent } from './pages/blog/blog.component';
 import { ContactoComponent } from './pages/contacto/contacto.component';
 import { SobreMiComponent } from './pages/sobre-mi/sobre-mi.component';
+import { BannerComponent } from '../shared/components/banner/banner.component';
 
 
 
@@ -15,7 +16,7 @@ import { SobreMiComponent } from './pages/sobre-mi/sobre-mi.component';
     HomeComponent,
     BlogComponent,
     ContactoComponent,
-    SobreMiComponent
+    SobreMiComponent,
   ],
   imports: [
     CommonModule,

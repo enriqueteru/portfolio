@@ -7,7 +7,7 @@
 .footer {
   display: flex;
   justify-content: center;
-  padding: $x3 0;
+  padding: $x2 0;
   color: white;
   background-color: rgb(0, 0, 0);
   height: auto;
@@ -18,14 +18,14 @@
   &__col2,
   &__col3 {
     width: 80%;
-    margin: 20px 0;
+    margin: 20px 0 10px 0;
     color: rgb(211, 211, 211);
     font-weight: 100;
   }
 
   &__col {
     &-item {
-      padding: $x3 0;
+      padding: $unit 0;
     }
   }
 }

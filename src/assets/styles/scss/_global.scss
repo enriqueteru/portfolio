@@ -19,3 +19,12 @@ $x8: calc(8*$unit);
 $x9: calc(9*$unit);
 $x10: calc(10*$unit);
 
+.router-link-active{
+color: white !important;
+}
+
+a{
+color: white;
+text-decoration: none;
+&:hover{color: white;}
+}

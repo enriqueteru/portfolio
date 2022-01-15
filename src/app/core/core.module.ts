@@ -11,6 +11,8 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatSliderModule } from '@angular/material/slider';
 import {MatGridListModule} from '@angular/material/grid-list';
 import { Not404Component } from './not404/not404.component';
+import { SharedModule } from '../shared/shared.module';
+import { RouterModule } from '@angular/router';
 
 
 
@@ -28,7 +30,8 @@ import { Not404Component } from './not404/not404.component';
     MatIconModule,
     MatCardModule,
     MatSliderModule,
-    MatGridListModule
+    MatGridListModule,
+    RouterModule
 
 
   ],

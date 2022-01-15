@@ -1,0 +1,25 @@
+.home{
+  @include flex(column, no-wrap, center, center);
+  padding: $x3;
+  margin-top: -120px;
+  height: 100vh;
+  background: black;
+  z-index: 100 !important;
+  color: white;
+
+  &__big{
+    margin-top: $x8;
+    font-size: 200px;
+  }
+
+  &__small{
+    margin-top: $x6;
+    font-size: 50px;
+    text-align: center;
+    line-height: 50px;
+  }
+
+  .mat-button{
+    font-size: $x3 !important;
+  }
+}

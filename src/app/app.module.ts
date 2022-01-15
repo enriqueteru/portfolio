@@ -23,7 +23,7 @@ import { NoopAnimationsModule } from '@angular/platform-browser/animations';
     NoopAnimationsModule
   ],
   exports:[
-    CoreModule
+    CoreModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

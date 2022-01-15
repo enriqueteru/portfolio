@@ -11,6 +11,12 @@
   &__logo {
     &-img {
       width: $x3;
+      transition: .5s;
+      &:hover{
+        cursor: pointer;
+        transform: scale(.9);
+        transition: .5s;
+      }
     }
   }
 
