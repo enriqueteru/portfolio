@@ -7,6 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SobreMiComponent implements OnInit {
 
+  public title: string = "Sobre mi"
+  public description: string = "Soy Enrique teruel, Consultor técnologico ubicado en San Javier, Murcia, trabajando para más de 12 países"
+  public background: string = "#0055ff"
   constructor() { }
 
   ngOnInit(): void {

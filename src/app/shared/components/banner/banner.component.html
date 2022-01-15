@@ -1,9 +1,9 @@
-<div class="banner">
-  <div class="banner__text">
-    <h1>Hola marcas inquietas</h1>
-    <p>Somos una agencia de branding que ayuda a las marcas inquietas a conectar con las personas. Guiamos a las marcas con hambre que miran hacia el futuro. Os acompañamos hasta el camino del éxito.</p>
+<div class="banner" [style.background]="background" >
+  <div class="banner__text" [style.color]="fontColor">
+    <h1>{{title}}</h1>
+    <p>{{description}}</p>
 
-    <button  style="margin-top: 30px" mat-button
-    > Ver casos</button>
+    <!-- <button  style="margin-top: 30px" mat-button
+    > Ver casos</button> -->
   </div>
 </div>
