@@ -1,0 +1,25 @@
+@import "/src/styles/responsive";
+@import "/src/styles/utils";
+
+.floating {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0px;
+  right: 0;
+  background-color: red;
+  width: 70%;
+  height: 30%;
+
+  @include medium {
+    background-color: black;
+    width: 70%;
+    height: 15%;
+  }
+
+  @include large {
+    width: 35%;
+    height: 40%;
+  }
+}

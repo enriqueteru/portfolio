@@ -1,0 +1,13 @@
+<nav class="nav">
+  <img class="nav__logo hoverable" src="assets/img/logo512.png" alt="logo" />
+  <ul class="nav__items-large">
+    <li routerLink="/" class="hoverable" *ngFor="let item of navData">
+      {{ item.name }}
+    </li>
+  </ul>
+  <img
+    class="nav__hamburger hoverable"
+    src="assets/img/hamburger.png"
+    alt="logo"
+  />
+</nav>

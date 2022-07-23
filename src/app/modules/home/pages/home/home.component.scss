@@ -1,0 +1,24 @@
+@import "/src/styles/responsive";
+@import "/src/styles/utils";
+
+.big-wrapper {
+  position: relative;
+  margin-top: -9vh;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  @include medium {
+    height: 50vh;
+  }
+
+  @include large {
+    height: 75vh;
+  }
+
+  &--black {
+    background-color: black;
+  }
+}
