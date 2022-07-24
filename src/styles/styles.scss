@@ -9,6 +9,37 @@
   box-sizing: border-box;
 }
 
+.subtitle {
+  padding: 10px 30px;
+  font-family: var(--main-font);
+  font-size: 20px;
+  font-weight: 100;
+  line-height: 1.2em;
+
+  @include small {
+    padding: 10px 30px;
+    font-size: 30px;
+  }
+
+  @include medium {
+    font-size: 50px;
+  }
+
+  @include large {
+    font-size: 60px;
+  }
+
+  &--black {
+    color: black;
+  }
+  &--white {
+    color: white;
+  }
+}
+
 :root {
-  --main-font: "Spoof";
+  --main-font: "Roobert";
+  --black-color: black;
+  --global-padding-xl: 5vh 10vh;
+  --global-padding-xs: 5vh 3vh;
 }

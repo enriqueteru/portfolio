@@ -5,11 +5,30 @@
 </app-banner>
 
 <div class="big-wrapper big-wrapper--black">
+  <img src="" alt="" />
   <app-floating>
-    <app-title [color]="'white'" [title]="'Hello'"></app-title
-  ></app-floating>
+    <p class="subtitle subtitle--white">
+      Aplicamos las mejores prácticas en el desarrollo de proyectos a medida.
+    </p>
+  </app-floating>
+  <div class="big-wrapper__img">
+    <img src="assets/img/code.jpg" alt="" />
+  </div>
   <app-title
     [color]="'white'"
-    [title]="'Impulsamos a tu negocio hacia la transformación digital'"
+    [title]="
+      'Creamos aplicaciones, webs y experiencias digitales para tus clientes'
+    "
   ></app-title>
 </div>
+
+<app-banner [color]="'white'"
+  ><app-title [title]="'Section'"></app-title>
+  <div class="t-cols">
+    <img
+      *ngFor="let i of [1, 2, 3]"
+      src="https://picsum.photos/400/300"
+      alt="imagen"
+    />
+  </div>
+</app-banner>

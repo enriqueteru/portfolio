@@ -1,0 +1,36 @@
+@import "/src/styles/responsive";
+@import "/src/styles/utils";
+
+.footer {
+  height: 50vh;
+  font-family: var(--main-font);
+  background-color: var(--black-color);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 50px;
+  flex-direction: column;
+  color: aliceblue;
+  padding: var(--global-padding-xs);
+
+  @include medium {
+  }
+
+  @include large {
+    padding: var(--global-padding-xl);
+    height: 15vh;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: row;
+  }
+
+  &__social {
+    list-style: none;
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    @include large {
+      flex-direction: row;
+    }
+  }
+}

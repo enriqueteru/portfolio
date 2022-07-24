@@ -3,22 +3,63 @@
 
 .big-wrapper {
   position: relative;
-  margin-top: -9vh;
-  height: 100vh;
+  height: 90vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  flex-wrap: nowrap;
+  overflow-y: visible;
+  padding: var(--global-padding-xs);
+  &__img {
+    display: flex;
+    justify-content: start;
+    align-items: flex-start;
+
+    img {
+      width: 100%;
+      padding: var(--global-padding-xs);
+    }
+  }
 
   @include medium {
-    height: 50vh;
+    height: 120vh;
+    img {
+      width: 80%;
+    }
   }
 
   @include large {
-    height: 75vh;
+    justify-content: space-between;
+    padding: var(--global-padding-xl);
+
+    img {
+      width: 50%;
+    }
+    height: auto;
   }
 
   &--black {
     background-color: black;
+  }
+}
+
+.t-cols {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  height: auto;
+  width: 100%;
+  gap: 5vw;
+
+  img {
+    width: 100%;
+  }
+
+  @include large {
+    flex-direction: row;
+    gap: 2vw;
   }
 }

@@ -1,18 +1,21 @@
 @import "/src/styles/responsive";
 @import "/src/styles/utils";
 .banner {
-  margin-top: -9vh;
-  height: 50vh;
+  padding: var(--global-padding-xs);
+  height: auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  flex-wrap: nowrap;
+  overflow: hidden;
 
   @include medium {
-    height: 50vh;
+    height: auto;
   }
 
   @include large {
-    height: 75vh;
+    padding: var(--global-padding-xl);
+    height: auto;
   }
 }
