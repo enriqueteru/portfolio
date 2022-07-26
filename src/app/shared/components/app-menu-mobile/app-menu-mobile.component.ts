@@ -1,19 +1,14 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-
-interface menuNav {
-  path: string;
-  name: string;
-}
+import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
 
 @Component({
-  selector: 'app-main-nav',
-  templateUrl: './main-nav.component.html',
-  styleUrls: ['./main-nav.component.scss'],
+  selector: 'app-app-menu-mobile',
+  templateUrl: './app-menu-mobile.component.html',
+  styleUrls: ['./app-menu-mobile.component.scss'],
 })
-export class MainNavComponent implements OnInit {
+export class AppMenuMobileComponent implements OnInit {
   @Input() isOpen?: boolean;
   @Output() toogleMenuEmmiter = new EventEmitter<boolean>();
-  public navData: menuNav[] = [
+  public navData: any[] = [
     {
       path: 'solutions',
       name: 'Solutions',
@@ -31,7 +26,6 @@ export class MainNavComponent implements OnInit {
       name: 'Contact',
     },
   ];
-
   constructor() {}
 
   ngOnInit(): void {}

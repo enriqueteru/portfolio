@@ -1,3 +1,11 @@
-<app-main-nav></app-main-nav>
+<app-app-menu-mobile
+  [isOpen]="this.MenuState"
+  (toogleMenuEmmiter)="changeMenuState($event)"
+  *ngIf="this.MenuState"
+></app-app-menu-mobile>
+<app-main-nav
+  [isOpen]="this.MenuState"
+  (toogleMenuEmmiter)="changeMenuState($event)"
+></app-main-nav>
 <router-outlet></router-outlet>
 <app-footer></app-footer>

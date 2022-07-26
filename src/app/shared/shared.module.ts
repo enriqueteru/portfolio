@@ -5,6 +5,7 @@ import { BannerComponent } from './components/banner/banner.component';
 import { TitleComponent } from './components/title/title.component';
 import { FloatingComponent } from './components/floating/floating.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { AppMenuMobileComponent } from './components/app-menu-mobile/app-menu-mobile.component';
 
 const c = [
   MainNavComponent,
@@ -12,6 +13,7 @@ const c = [
   TitleComponent,
   FloatingComponent,
   FooterComponent,
+  AppMenuMobileComponent,
 ];
 @NgModule({
   declarations: [...c],
