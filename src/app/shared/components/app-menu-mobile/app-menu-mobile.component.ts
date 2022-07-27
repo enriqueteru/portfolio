@@ -1,4 +1,7 @@
 import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
+import { NavigationEnd, NavigationStart, Router } from '@angular/router';
+import { filter } from 'rxjs';
+import { MenuRoutesService } from '../../services/menu-routes.service';
 
 @Component({
   selector: 'app-app-menu-mobile',
@@ -8,27 +11,19 @@ import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
 export class AppMenuMobileComponent implements OnInit {
   @Input() isOpen?: boolean;
   @Output() toogleMenuEmmiter = new EventEmitter<boolean>();
-  public navData: any[] = [
-    {
-      path: 'solutions',
-      name: 'Solutions',
-    },
-    {
-      path: 'team',
-      name: 'Team',
-    },
-    {
-      path: 'resources',
-      name: 'Resources',
-    },
-    {
-      path: 'contact',
-      name: 'Contact',
-    },
-  ];
-  constructor() {}
+  public navData?: any;
 
-  ngOnInit(): void {}
+  constructor(private _menuRoutes: MenuRoutesService, private router: Router) {}
+
+  ngOnInit(): void {
+    this.navData = this._menuRoutes.navData;
+    // Get NavigationStart events
+    this.router.events
+      .pipe(filter((e) => e instanceof NavigationEnd))
+      .subscribe((_) => {
+        this.toogleMenuEmmiter.emit(!this.isOpen);
+      });
+  }
 
   toogleMenu() {
     this.toogleMenuEmmiter.emit(!this.isOpen);

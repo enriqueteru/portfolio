@@ -6,6 +6,7 @@ import { TitleComponent } from './components/title/title.component';
 import { FloatingComponent } from './components/floating/floating.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { AppMenuMobileComponent } from './components/app-menu-mobile/app-menu-mobile.component';
+import { RouterModule } from '@angular/router';
 
 const c = [
   MainNavComponent,
@@ -17,7 +18,7 @@ const c = [
 ];
 @NgModule({
   declarations: [...c],
-  imports: [CommonModule],
+  imports: [CommonModule, RouterModule],
   exports: [...c],
 })
 export class SharedModule {}

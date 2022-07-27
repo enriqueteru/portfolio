@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { TeamPageComponent } from './pages/team-page/team-page.component';
-import { TeamModule } from './team.module';
 
 const routes: Routes = [
   {

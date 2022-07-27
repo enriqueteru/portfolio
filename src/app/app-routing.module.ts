@@ -18,8 +18,14 @@ const routes: Routes = [
       import('./modules/team/team.module').then((m) => m.TeamModule),
   },
   {
+    path: '',
+    redirectTo: 'home',
+    pathMatch: 'full',
+  },
+  {
     path: '**',
-    component: HomeComponent,
+    redirectTo: 'home',
+    pathMatch: 'full',
   },
 ];
 

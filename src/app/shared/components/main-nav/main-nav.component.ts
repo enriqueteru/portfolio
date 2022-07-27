@@ -1,9 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-
-interface menuNav {
-  path: string;
-  name: string;
-}
+import { MenuRoutesService } from '../../services/menu-routes.service';
 
 @Component({
   selector: 'app-main-nav',
@@ -13,28 +9,12 @@ interface menuNav {
 export class MainNavComponent implements OnInit {
   @Input() isOpen?: boolean;
   @Output() toogleMenuEmmiter = new EventEmitter<boolean>();
-  public navData: menuNav[] = [
-    {
-      path: 'solutions',
-      name: 'Solutions',
-    },
-    {
-      path: 'team',
-      name: 'Team',
-    },
-    {
-      path: 'resources',
-      name: 'Resources',
-    },
-    {
-      path: 'contact',
-      name: 'Contact',
-    },
-  ];
 
-  constructor() {}
-
-  ngOnInit(): void {}
+  constructor(private _menuRoutes: MenuRoutesService) {}
+  public navData?: any;
+  ngOnInit(): void {
+    this.navData = this._menuRoutes.navData;
+  }
 
   toogleMenu() {
     this.toogleMenuEmmiter.emit(!this.isOpen);
