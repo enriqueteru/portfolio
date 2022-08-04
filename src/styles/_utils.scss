@@ -3,3 +3,36 @@
     cursor: pointer;
   }
 }
+
+.checkbox-custom {
+  opacity: 0;
+
+  &__icon-state {
+    position: relative;
+    display: inline-block;
+    margin-right: 12px;
+    padding: 0;
+    width: 30px;
+    height: 30px;
+    border: 2px solid #e7e6e6;
+    background-color: #fff;
+    vertical-align: middle;
+  }
+
+  &:focus {
+    & + .checkbox-custom__icon-state {
+      box-shadow: 0 0 8px rgba(#66afe9, 0.6);
+    }
+  }
+
+  &:checked {
+    & + .checkbox-custom__icon-state {
+      &::after {
+        content: "X";
+        position: absolute;
+        bottom: 5px;
+        right: 10px;
+      }
+    }
+  }
+}

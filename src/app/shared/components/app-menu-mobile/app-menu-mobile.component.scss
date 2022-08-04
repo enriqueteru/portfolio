@@ -1,3 +1,6 @@
+@import "/src/styles/responsive";
+@import "/src/styles/utils";
+
 .mobile-menu {
   position: fixed;
   z-index: 1;
@@ -19,7 +22,7 @@
   }
 
   &__close {
-    position: absolute;
+    position: fixed;
     font-family: var(--main-font);
     width: 30px;
     height: auto;
@@ -44,6 +47,17 @@
     li {
       margin: 30px 0;
       text-decoration: none;
+    }
+  }
+
+  @include medium {
+    &__list {
+      font-size: 120px;
+      font-weight: 100;
+      li {
+        margin: 30px 0;
+        text-decoration: none;
+      }
     }
   }
 }

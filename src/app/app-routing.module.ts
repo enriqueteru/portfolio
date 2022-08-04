@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { ContactComponent } from './modules/contact/page/contact.component';
 import { HomeComponent } from './modules/home/pages/home/home.component';
 
 const routes: Routes = [
@@ -16,6 +17,24 @@ const routes: Routes = [
     path: 'team',
     loadChildren: () =>
       import('./modules/team/team.module').then((m) => m.TeamModule),
+  },
+  {
+    path: 'solutions',
+    loadChildren: () =>
+      import('./modules/solutions/solutions.module').then(
+        (m) => m.SolutionsModule
+      ),
+  },
+  {
+    path: 'resources',
+    loadChildren: () =>
+      import('./modules/resources/resources.module').then(
+        (m) => m.ResourcesModule
+      ),
+  },
+  {
+    path: 'contact',
+    component: ContactComponent,
   },
   {
     path: '',

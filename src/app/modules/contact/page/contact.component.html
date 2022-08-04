@@ -1,0 +1,93 @@
+<div class="contact">
+  <section class="contact__wrapper">
+    <div class="contact__child">
+      <div>
+        <h2>OFICINA</h2>
+        <p>
+          Avenida Virgen del Loreto, Nº 10, Santiago de la Ribera, Murcia
+          (30720)
+        </p>
+      </div>
+      <div>
+        <h2>TELÉFONO</h2>
+        <p>+34 639 88 05 51</p>
+      </div>
+      <div>
+        <h2>EMAIL</h2>
+        <p>info@enriqueteruel.com</p>
+      </div>
+    </div>
+    <div class="contact__child">
+      <h3 class="contact__title">Contacta con nosotros</h3>
+      <form [formGroup]="contactFormGroup" (submit)="submitForm()">
+        <div *ngFor="let i of contactForm" class="contact__form">
+          <input
+            autocomplete="off"
+            *ngIf="i.type === 'text'"
+            class="contact__input"
+            type="{{ i.type }}"
+            formControlName="{{ i.placeholder }}"
+            placeholder="{{ i.placeholder }}"
+          />
+          <ng-container *ngIf="i.type === 'select'">
+            <select
+              formControlName="{{ i.placeholder }}"
+              class="contact__input"
+            >
+              <option *ngFor="let op of i.select" value="{{ op.name }}">
+                {{ op.name }}
+              </option>
+            </select>
+          </ng-container>
+          <ng-container *ngIf="i.type === 'email'">
+            <input
+              autocomplete="off"
+              formControlName="{{ i.placeholder }}"
+              class="contact__input"
+              type="{{ i.type }}"
+              placeholder="{{ i.placeholder }}"
+            />
+
+            <p
+              style="color: red"
+              *ngIf="contactFormGroup.get('Email')?.getError('email')"
+            >
+              Añade un email <strong>valido</strong>
+            </p>
+          </ng-container>
+          <ng-container *ngIf="i.type === 'number'">
+            <input
+              autocomplete="off"
+              formControlName="{{ i.placeholder }}"
+              class="contact__input"
+              type="{{ i.type }}"
+              placeholder="{{ i.placeholder }}"
+            />
+          </ng-container>
+          <ng-container *ngIf="i.type === 'checkbox'">
+            <div class="inline__form">
+              <label class="form-control">
+                <input
+                  autocomplete="off"
+                  formControlName="{{ i.placeholder }}"
+                  class="{{ i.class }} checkmark"
+                  type="{{ i.type }}"
+                  placeholder="{{ i.placeholder }}"
+                  (change)="fieldsChange($event)"
+                />
+                <i class="checkbox-custom__icon-state hoverable"></i>
+                {{ i.label }}</label
+              >
+              <input
+                autocomplete="off"
+                [disabled]="contactFormGroup.invalid"
+                class="contact__submit"
+                type="submit"
+              />
+            </div>
+          </ng-container>
+        </div>
+      </form>
+    </div>
+  </section>
+</div>

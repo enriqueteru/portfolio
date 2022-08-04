@@ -1,9 +1,6 @@
 import { Injectable } from '@angular/core';
+import { menuNav } from 'src/app/core/schema/data';
 
-interface menuNav {
-  path: string;
-  name: string;
-}
 @Injectable({
   providedIn: 'root',
 })

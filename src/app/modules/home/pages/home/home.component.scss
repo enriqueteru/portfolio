@@ -3,7 +3,7 @@
 
 .big-wrapper {
   position: relative;
-  height: 90vh;
+  height: 110vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -23,7 +23,7 @@
   }
 
   @include medium {
-    height: 120vh;
+    height: 140vh;
     img {
       width: 80%;
     }
@@ -54,12 +54,46 @@
   width: 100%;
   gap: 5vw;
 
-  img {
-    width: 100%;
+  &__parraf {
+    margin: 50px 0;
+    padding: 0 15%;
+
+    p {
+      font-family: var(--main-font);
+      font-size: 1.3em;
+      font-weight: 100;
+    }
+  }
+
+  @include medium {
+    flex-direction: column;
+    gap: 2vw;
+
+    &__parraf {
+      margin: 50px 0;
+      padding: 0 10%;
+
+      p {
+        font-family: var(--main-font);
+        font-size: 1.6em;
+        font-weight: 100;
+      }
+    }
   }
 
   @include large {
     flex-direction: row;
     gap: 2vw;
+
+    &__parraf {
+      padding: 0 5%;
+
+      &:first-child {
+        margin-top: -50px;
+      }
+      &:last-child {
+        margin-top: 100px;
+      }
+    }
   }
 }

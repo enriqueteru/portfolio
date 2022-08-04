@@ -3,6 +3,14 @@
 @import "./responsive";
 @import "./utils";
 
+:root {
+  --main-font: "Roobert";
+  --black-color: black;
+  --white-color: white;
+  --global-padding-xl: 5vh 10vh;
+  --global-padding-xs: 5vh 3vh;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -12,7 +20,7 @@
 .subtitle {
   padding: 10px 30px;
   font-family: var(--main-font);
-  font-size: 20px;
+  font-size: 30px;
   font-weight: 100;
   line-height: 1.2em;
 
@@ -35,11 +43,4 @@
   &--white {
     color: white;
   }
-}
-
-:root {
-  --main-font: "Roobert";
-  --black-color: black;
-  --global-padding-xl: 5vh 10vh;
-  --global-padding-xs: 5vh 3vh;
 }
