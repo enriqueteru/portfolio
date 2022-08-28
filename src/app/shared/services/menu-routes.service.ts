@@ -7,20 +7,24 @@ import { menuNav } from 'src/app/core/schema/data';
 export class MenuRoutesService {
   public navData: menuNav[] = [
     {
-      path: 'solutions',
-      name: 'Solutions',
+      path: '',
+      name: 'Inicio',
     },
     {
-      path: 'team',
-      name: 'Team',
+      path: 'soluciones',
+      name: 'Soluciones',
     },
     {
-      path: 'resources',
-      name: 'Resources',
+      path: 'equipo',
+      name: 'Equipo',
     },
     {
-      path: 'contact',
-      name: 'Contact',
+      path: 'proyectos',
+      name: 'Proyectos',
+    },
+    {
+      path: 'contacto',
+      name: 'Contacto',
     },
   ];
 }

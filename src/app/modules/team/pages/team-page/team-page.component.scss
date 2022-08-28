@@ -1,3 +1,9 @@
 .team-wrapper {
-  height: 100vh;
+  height: auto;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-direction: column;
+  gap: 50px;
+  margin: 50px 0;
 }

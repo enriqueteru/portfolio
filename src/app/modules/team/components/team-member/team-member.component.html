@@ -1,0 +1,13 @@
+<div class="container">
+  <div class="team-card" *ngFor="let team of teamStaff; let i">
+    <img
+      routerLink="{{ team.id }}"
+      class="team-card__changer"
+      src="{{ team.img }}"
+      alt="{{ team.name }}"
+    />
+    <p class="team-card__member">{{ team.name }}</p>
+    <p class="team-card__job">{{ team.job }}</p>
+    <p class="team-card__description">{{ team.description }}</p>
+  </div>
+</div>

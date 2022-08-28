@@ -13,6 +13,9 @@ import { FormInputs } from 'src/app/core/schema/data';
   styleUrls: ['./contact.component.scss'],
 })
 export class ContactComponent implements OnInit {
+
+  title: string = "Contacto"
+
   contactForm: FormInputs[] = [
     {
       placeholder: 'Nombre',
@@ -21,22 +24,9 @@ export class ContactComponent implements OnInit {
       initialValue: '',
     },
     {
-      placeholder: 'Apellido',
-      type: 'text',
-      validators: Validators.required,
-      initialValue: '',
-    },
-    {
       placeholder: 'Email',
       type: 'email',
       validators: Validators.email,
-      initialValue: '',
-    },
-    {
-      placeholder: 'Teléfono',
-      type: 'number',
-      // validators: Validators.pattern('[- +()0-9]+'),
-
       initialValue: '',
     },
     {

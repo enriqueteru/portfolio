@@ -7,6 +7,7 @@ import { FloatingComponent } from './components/floating/floating.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { AppMenuMobileComponent } from './components/app-menu-mobile/app-menu-mobile.component';
 import { RouterModule } from '@angular/router';
+import { MarqueeComponent } from './components/marquee/marquee.component';
 
 const c = [
   MainNavComponent,
@@ -15,6 +16,7 @@ const c = [
   FloatingComponent,
   FooterComponent,
   AppMenuMobileComponent,
+  MarqueeComponent
 ];
 @NgModule({
   declarations: [...c],

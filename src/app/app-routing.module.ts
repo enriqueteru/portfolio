@@ -14,26 +14,26 @@ const routes: Routes = [
       import('./modules/home/home.module').then((m) => m.HomeModule),
   },
   {
-    path: 'team',
+    path: 'equipo',
     loadChildren: () =>
       import('./modules/team/team.module').then((m) => m.TeamModule),
   },
   {
-    path: 'solutions',
+    path: 'soluciones',
     loadChildren: () =>
       import('./modules/solutions/solutions.module').then(
         (m) => m.SolutionsModule
       ),
   },
   {
-    path: 'resources',
+    path: 'proyectos',
     loadChildren: () =>
       import('./modules/resources/resources.module').then(
         (m) => m.ResourcesModule
       ),
   },
   {
-    path: 'contact',
+    path: 'contacto',
     component: ContactComponent,
   },
   {

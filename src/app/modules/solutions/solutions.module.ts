@@ -6,6 +6,6 @@ import { SolutionsRoutingModule } from './solutions-routing.module';
 
 @NgModule({
   declarations: [SolutionsComponent],
-  imports: [CommonModule, SharedModule, SolutionsRoutingModule],
+  imports: [CommonModule, SharedModule, SolutionsRoutingModule, SharedModule],
 })
 export class SolutionsModule {}
