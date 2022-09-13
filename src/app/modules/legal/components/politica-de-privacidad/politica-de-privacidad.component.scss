@@ -1,0 +1,10 @@
+@import "/src/styles/responsive";
+@import "/src/styles/utils";
+@import "/src/styles/skeleton";
+* {
+  font-family: var(--main-font);
+  display: flex;
+  flex-direction: column;
+  padding: var(--global-padding-xl);
+  gap: 20px;
+}
