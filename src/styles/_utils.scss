@@ -1,38 +1,47 @@
-.hoverable {
-  &:hover {
-    cursor: pointer;
+/**
+* Links Effects
+**/
+
+.link {
+  padding: 10px 0 ;
+  text-decoration: none;
+  color: black;
+  transition: 350ms;
+  width: auto;
+  overflow: hidden;
+  position: relative;
+  display: inline-block;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    left: 0;
+  }
+  &::before {
+    background-color: var(--black-color);
+    height: 2px;
+    bottom: 0;
+    transform-origin: 100% 50%;
+    transform: scaleX(0);
+    transition: transform 0.3s cubic-bezier(0.76, 0, 0.24, 1);
+  }
+
+  &:hover::before {
+    transform-origin: 0% 50%;
+    transform: scaleX(1);
   }
 }
 
-.checkbox-custom {
-  opacity: 0;
+/**
+*
+**/
 
-  &__icon-state {
-    position: relative;
-    display: inline-block;
-    margin-right: 12px;
-    padding: 0;
-    width: 30px;
-    height: 30px;
-    border: 2px solid #e7e6e6;
-    background-color: #fff;
-    vertical-align: middle;
-  }
+.mt-5 {
+  margin: 50px 0;
+}
 
-  &:focus {
-    & + .checkbox-custom__icon-state {
-      box-shadow: 0 0 8px rgba(#66afe9, 0.6);
-    }
-  }
 
-  &:checked {
-    & + .checkbox-custom__icon-state {
-      &::after {
-        content: "X";
-        position: absolute;
-        bottom: 5px;
-        right: 10px;
-      }
-    }
-  }
+ul{
+  list-style: none;
 }

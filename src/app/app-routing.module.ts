@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ContactComponent } from './modules/contact/page/contact.component';
 import { HomeComponent } from './modules/home/pages/home/home.component';
+import { PresupuestoComponent } from './modules/presupuesto/presupuesto/presupuesto.component';
 
 const routes: Routes = [
   {
@@ -35,6 +36,20 @@ const routes: Routes = [
   {
     path: 'contacto',
     component: ContactComponent,
+  },
+  {
+    path: 'presupuesto',
+    loadChildren: () =>
+    import('./modules/presupuesto/presupuesto.module').then(
+      (m) => m.PresupuestoModule
+    ),
+  },
+  {
+    path: 'legal',
+    loadChildren: () =>
+    import('./modules/legal/legal.module').then(
+      (m) => m.LegalModule
+    ),
   },
   {
     path: '',

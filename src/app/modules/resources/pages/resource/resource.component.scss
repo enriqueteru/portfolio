@@ -1,0 +1,54 @@
+@use "/src/styles/skeleton";
+@use "/src/styles/responsive";
+
+.proyect {
+  font-family: var(--main-font);
+  padding: var(--global-padding-xl);
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  &__banner {
+    width: 100vw;
+    height: 60vh;
+    background-image: none;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  &__title {
+    font-size: 40px;
+    font-weight: 600;
+  }
+  &__client {
+    font-size: 25px;
+    font-weight: 100;
+  }
+  &__subtitle {
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 30px;
+  }
+  &__description {
+    font-size: 25px;
+    font-weight: 200;
+    margin-bottom: 1em;
+  }
+  &__child {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1;
+  }
+}
+
+.gallery {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2em;
+  &__img {
+    width: 80vw;
+  }
+}

@@ -1,0 +1,96 @@
+@use "/src/styles/skeleton";
+
+.proyect {
+  padding: var(--global-padding-xl);
+  font-family: var(--main-font);
+  display: flex;
+
+  img {
+
+    object-fit: cover;
+    object-position: center;
+  }
+
+  &__card {
+    width: 100%;
+    display: flex;
+    flex-flow: column wrap;
+    &-title {
+      margin: 0.5em 0;
+      font-size: 40px;
+    }
+    &-categorie {
+      font-size: 18px;
+      margin: 0.5em 0;
+    }
+    &-description {
+      margin: 0.5em 0;
+      font-size: 25px;
+    }
+  }
+}
+
+
+
+// Variables
+$image-size: 400px;
+$gap-size: 0rem;
+$breakpoints: ("small": 320px, "medium": 768px, "large": 1024px) !default;
+
+.grid-gallery {
+  display: grid;
+  grid-auto-rows: $image-size;
+  gap: $gap-size;
+  grid-auto-flow: row dense;
+  @media all and (min-width: map-get($breakpoints, 'small')) {
+    $num-columns: 1;
+    grid-template-columns: repeat($num-columns, 1fr);
+  }
+
+  @media all and (min-width: map-get($breakpoints, 'medium')) {
+    $num-columns: 2;
+    grid-template-columns: repeat($num-columns, 1fr);
+  }
+
+  @media all and (min-width: map-get($breakpoints, 'large')) {
+    $num-columns: 3;
+    grid-template-columns: repeat($num-columns, 1fr);
+  }
+
+  &__item {
+    height: 100%;
+    false {
+      grid-column: span 1;
+    }
+    false {
+      grid-column: span 2;
+      grid-row: span 1;
+    }
+    false {
+      grid-column: span 3;
+      grid-row: span 1;
+    }
+    false {
+      grid-column: span 1;
+      grid-row: span 2;
+    }
+    false {
+      grid-column: span 2;
+      grid-row: span 2;
+    }
+    false {
+      grid-row: span 3;
+    }
+  }
+  &__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: 300ms;
+    &:hover{
+      transition: 200ms;
+      transform: scale(1.05);
+    }
+  }
+}

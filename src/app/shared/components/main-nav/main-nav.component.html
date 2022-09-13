@@ -1,14 +1,14 @@
 <nav class="nav">
   <img
     [routerLink]="'/'"
-    class="nav__logo hoverable"
+    class="nav__logo"
     src="assets/img/logo512.png"
     alt="logo"
   />
   <ul class="nav__items-large">
-    <li [routerLink]="item.path" class="hoverable" *ngFor="let item of navData">
+    <a class="link" [routerLink]="item.path"  *ngFor="let item of navData">
       {{ item.name }}
-    </li>
+    </a>
   </ul>
   <img
     (click)="toogleMenu()"

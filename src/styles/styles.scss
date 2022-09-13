@@ -1,14 +1,20 @@
 /* You can add global styles to this file, and also import other style files */
-@import "./custom-font";
 @import "./responsive";
+@import "./custom-font";
 @import "./utils";
 
 :root {
   --main-font: "Roobert";
+  --grey-color: rgba(252, 252, 252, 0.394);
   --black-color: black;
   --white-color: white;
   --global-padding-xl: 5vh 10vh;
-  --global-padding-xs: 5vh 3vh;
+  --global-padding-xs: 5vh 5vh;
+}
+
+::selection {
+  background: black;
+  color: white;
 }
 
 * {
@@ -18,14 +24,12 @@
 }
 
 .subtitle {
-  padding: 10px 30px;
   font-family: var(--main-font);
   font-size: 30px;
   font-weight: 100;
   line-height: 1.2em;
 
   @include small {
-    padding: 10px 30px;
     font-size: 30px;
   }
 

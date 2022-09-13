@@ -2,35 +2,94 @@
 @import "/src/styles/utils";
 
 .footer {
-  height: 50vh;
+  height: auto;
   font-family: var(--main-font);
   background-color: var(--black-color);
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: flex-start;
   gap: 50px;
   flex-direction: column;
   color: aliceblue;
   padding: var(--global-padding-xs);
 
+  &__info {
+    width: 50%;
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: flex-start;
+    gap: 10px;
+
+    &--general {
+      color: var(--white-color);
+    }
+
+    &--tech {
+      color: var(--grey-color);
+    }
+    &--react {
+      color: var(--grey-color);
+      border-bottom: 1 solid var(--grey-color);
+    }
+  }
+
+  &__social {
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    gap: 15px;
+    margin-bottom: 20px;
+
+    list-style: none;
+    a {
+      padding: 0 3px;
+      color: white;
+      text-decoration: none;
+      &:hover {
+        color: azure;
+      }
+    }
+    &-icon {
+      &-img {
+        height: 35px;
+        width: auto;
+        color: white;
+        filter: invert(1);
+        transition: 350ms;
+        &:hover {
+          cursor: pointer;
+          height: calc(35px + 10px);
+          transition: 350ms;
+        }
+      }
+    }
+  }
+
   @include medium {
+    padding: var(--global-padding-xs);
+    height: auto;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: row;
   }
 
   @include large {
     padding: var(--global-padding-xl);
-    height: 15vh;
+    height: auto;
     justify-content: space-between;
     align-items: flex-start;
     flex-direction: row;
   }
 
   &__social {
+    width: 50%;
+    margin-bottom: 20px;
     list-style: none;
     display: flex;
     gap: 10px;
-    flex-direction: column;
-    @include large {
-      flex-direction: row;
-    }
+    flex-direction: row;
   }
 }

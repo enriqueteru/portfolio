@@ -30,7 +30,7 @@
 <div class="solution">
   <div class="solution__card" *ngFor="let solution of solutions">
     <img
-      class="solution__img"
+      class="solution__img skeleton"
       src="{{ solution.path }}"
       alt="{{ solution.name }}"
     />
@@ -38,7 +38,7 @@
 </div>
 
 <div class="info-block">
-  <img src="assets/solutions/s2.jpg" alt="s1">
+  <img class="skeleton" src="assets/solutions/s2.jpg" alt="s1">
   <div class="info-block__wrapper">
 <img src="assets/solutions/s1.jpg" alt="s1">
   </div>
@@ -50,15 +50,15 @@
   <div class="info-block__wrapper">
     <div class="info-block__column">
       <h3 class="info-block__subheading"> Branding / UX - UI </h3>
-      Tu marca es una suma de experiencias, la interación con tus productos digitales es una de ellas. Tiempo de carga, interacción, animaciones, contenido, flujos. Todo ello ayuda a consolidar o destruir tu reputación.
+      <p>Tu marca es una suma de experiencias, la interación con tus productos digitales es una de ellas. Tiempo de carga, interacción, animaciones, contenido, flujos. Todo ello ayuda a consolidar o destruir tu reputación.</p>
     </div>
     <div class="info-block__column">
       <h3 class="info-block__subheading"> Desarrollo Aplicaciones </h3>
-     Ya sea un MVP o una aplicación que saldrá a mercado próximamente, podemos ayudarete a desarrollar una solución a medida, adaptado a las necesidades de tu proyecto. priociramos la innovación con alta productividad.
+     <p>Ya sea un MVP o una aplicación que saldrá a mercado próximamente, podemos ayudarete a desarrollar una solución a medida, adaptado a las necesidades de tu proyecto. priociramos la innovación con alta productividad.</p>
     </div>
     <div class="info-block__column">
       <h3 class="info-block__subheading"> Diseño web </h3>
-      Tu web es tu activo más valioso en internet, por ello debes de contar con un producto adaptado a tu público y actualizado a sus formas de navegar por la red.
+      <p>Tu web es tu activo más valioso en internet, por ello debes de contar con un producto adaptado a tu público y actualizado a sus formas de navegar por la red.</p>
     </div>
   </div>
 </div>
@@ -68,16 +68,17 @@
   <div class="info-block__wrapper">
     <div class="info-block__column">
       <h3 class="info-block__subheading"> SEO Técnico </h3>
-      La parte del SEO que el departamento de marketing siempre olvida, aumenta las  posibilidades de optimización técnica de tu web. Código fuente, sistemas operativos y las configuraciones de servidor.
+      <p>La parte del SEO que el departamento de marketing siempre olvida, aumenta las  posibilidades de optimización técnica de tu web. Código fuente, sistemas operativos y las configuraciones de servidor.</p>
     </div>
     <div class="info-block__column">
       <h3 class="info-block__subheading"> Aplicaciones Móviles </h3>
-      La creciente popularidad de los teléfonos inteligentes y las tabletas ha convertido el desarrollo de aplicaciones móviles una gran oportunidad para ofrecer valora tus clientes.
+      <p>La creciente popularidad de los teléfonos inteligentes y las tabletas ha convertido el desarrollo de aplicaciones móviles una gran oportunidad para ofrecer valora tus clientes.</p>
     </div>
     <div class="info-block__column">
       <h3 class="info-block__subheading"> Consultoría </h3>
-      Identificar las vulnerabilidades qde tu empresa y los incumplimientos de las políticas de seguridad, es primordial para incrementar el nivel de protección y seguridad de toda la organización.
+      <p>Identificar las vulnerabilidades qde tu empresa y los incumplimientos de las políticas de seguridad, es primordial para incrementar el nivel de protección y seguridad de toda la organización.</p>
     </div>
   </div>
 </div>
+
 <app-marquee [marqueeText]="'Consulta tu presupuesto sin compromiso hoy'"></app-marquee>

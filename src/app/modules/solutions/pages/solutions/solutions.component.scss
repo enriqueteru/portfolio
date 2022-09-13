@@ -1,10 +1,9 @@
 @import "/src/styles/responsive";
 @import "/src/styles/utils";
 
-*{
+* {
   font-family: var(--main-font);
 }
-
 
 .banner__main {
   height: auto;
@@ -12,7 +11,7 @@
   justify-content: start;
   align-items: center;
   flex-direction: column;
-  gap: 50px;
+  gap: 8em;
   margin: 25px 0;
   text-align: center;
 }
@@ -22,32 +21,13 @@
   flex-direction: column;
   justify-content: start;
   align-items: start;
-  font-family: var(--main-font);
   margin: 2em 0;
   gap: 3em;
   padding: var(--global-padding-xs);
 
-img{
-  width: 100%;
-  height: auto;
-
-}
-
-  @include medium {
-    flex-direction: column;
-
-  }
-
-  @include large {
-    img{
-      width: 50%;
-      height: auto;
-
-    }
-
-    flex-direction: row;
-    gap: 2em;
-    padding: var(--global-padding-xl);
+  img {
+    width: 100%;
+    height: auto;
   }
 
   &__heading {
@@ -55,18 +35,27 @@ img{
     font-size: 45px;
     font-weight: 100;
     width: 100%;
+
+    @include medium {
+      width: 50%;
+    }
+
+    @include large {
+      width: 60%;
+      margin-right: 110px;
+    }
   }
 
-  &__subheading{
+  &__subheading {
     font-size: 30px;
     font-weight: 500;
     width: 100%;
     margin-bottom: 1em;
   }
   &__wrapper {
-    flex: 1  1.2 auto;
+    flex: 1 1.2 auto;
     display: flex;
-    gap: 2em;
+    gap: 3em;
     justify-content: center;
     align-items: flex-start;
     flex-direction: column;
@@ -84,20 +73,42 @@ img{
   }
 
   &__column {
-    flex: 1 auto;
+    flex: 1 1 auto;
+  }
+
+  @include medium {
+    flex-direction: column;
+  }
+
+  @include large {
+    img {
+      width: 50%;
+      height: auto;
+      margin: 50px 0;
+    }
+    flex-direction: row;
+    gap: 2em;
+    padding: var(--global-padding-xl);
   }
 }
 
 .solution {
   padding: var(--global-padding-xs);
-  font-family: var(--main-font);
   display: flex;
-  justify-content: space-around;
+  justify-content: flex-start;
   align-items: center;
   flex-wrap: wrap;
   font-size: 20px;
   max-width: 100%;
   margin: 2em 0;
+
+  @include medium {
+    justify-content: flex-start;
+  }
+
+  @include large {
+    justify-content: space-around;
+  }
 
   &__card {
     display: flex;
@@ -124,25 +135,3 @@ img{
     width: 100%;
   }
 }
-
-
-.contact{
-  &__title{
-    overflow: hidden;
-    white-space: nowrap;
-    height: auto;
-    font-size: 300px;
-    animation: marquee 10s linear infinite;
-  }
-}
-
-
-@keyframes marquee {
-  from {
-    transform: translateX(100%);
-  }
-  to {
-    transform: translateX(-100%);
-  }
-}
-

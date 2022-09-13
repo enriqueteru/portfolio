@@ -3,6 +3,7 @@ import { Validators } from '@angular/forms';
 export interface dataHome {
   title: string;
   describe: string;
+  list?:string[]
 }
 
 export interface menuNav {
@@ -52,4 +53,40 @@ export interface solution {
   name: string;
   description?: string;
   path: string;
+}
+
+export interface resApiResources {
+  msg: string;
+  proyects: proyect[];
+}
+
+export interface resApiResource {
+  msg: string;
+  proyect: proyect;
+}
+
+export interface proyect {
+  id: number;
+  name: string;
+  client: string;
+  description: string;
+  categorie: string;
+  state: boolean;
+  content: string;
+  coverImg: string;
+  github: string;
+  web: string;
+}
+
+
+
+export interface resApiResourcesgallery {
+  msg: string;
+  images: image[];
+}
+
+export interface image {
+  id: number,
+  id_gallery: number,
+  image: string
 }

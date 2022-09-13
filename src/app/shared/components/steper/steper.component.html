@@ -1,0 +1,8 @@
+
+<div class="steper__wrapper" *ngIf="numberOfSteps! > 1">
+<div>
+ {{this.StepConfig[this.actualStep -1].title}}
+ {{this.StepConfig[this.actualStep -1].content}}
+</div>
+<app-steper-controller  [numberOfSteps]="numberOfSteps" [previousStep]="this.actualStep" (actualStep)="getStepUpdated($event)"></app-steper-controller>
+</div>

@@ -1,85 +1,17 @@
-<div class="banner__main">
-
-    <app-title [title]="title"></app-title>
-
-</div>
-
 <div class="contact">
-  <section class="contact__wrapper">
-    <div class="contact__child">
-      <form *ngIf="!this.submitted" [formGroup]="contactFormGroup" (submit)="submitForm()">
-        <div *ngFor="let i of contactForm" class="contact__form">
-          <input
-            autocomplete="off"
-            *ngIf="i.type === 'text'"
-            class="contact__input"
-            type="{{ i.type }}"
-            formControlName="{{ i.placeholder }}"
-            placeholder="{{ i.placeholder }} *"
-          />
-          <ng-container *ngIf="i.type === 'select'">
-            <select
-              style="color: grey"
-              formControlName="{{ i.placeholder }}"
-              class="contact__input"
-            >
-              <option
-                style="color: black"
-                *ngFor="let op of i.select"
-                value="{{ op.name }}"
-              >
-                {{ op.name }}
-              </option>
-            </select>
-          </ng-container>
-          <ng-container *ngIf="i.type === 'email'">
-            <input
-              autocomplete="off"
-              formControlName="{{ i.placeholder }}"
-              class="contact__input"
-              type="{{ i.type }}"
-              placeholder="{{ i.placeholder }} *"
-            />
-          </ng-container>
-          <ng-container *ngIf="i.type === 'number'">
-            <input
-              autocomplete="off"
-              formControlName="{{ i.placeholder }}"
-              class="contact__input"
-              type="{{ i.type }}"
-              placeholder="{{ i.placeholder }} *"
-            />
-          </ng-container>
-          <ng-container *ngIf="i.type === 'checkbox'">
-            <div class="inline__form">
-              <label class="form-control check">
-                <input
-                  autocomplete="off"
-                  formControlName="{{ i.placeholder }}"
-                  class="{{ i.class }} checkmark"
-                  type="{{ i.type }}"
-                  placeholder="{{ i.placeholder }} *"
-                  (change)="fieldsChange($event)"
-                />
-                <i class="checkbox-custom__icon-state hoverable"></i>
-                {{ i.label }}</label
-              >
-            </div>
-          </ng-container>
-        </div>
-        <input
-          autocomplete="off"
-          [disabled]="contactFormGroup.invalid"
-          class="contact__submit"
-          type="submit"
-        />
-      </form>
-      <div *ngIf="this.submitted" ><div style="width:100%"><div style="height:0;padding-bottom:75%;position:relative;width:100%"><iframe allowfullscreen="" frameBorder="0" height="100%" src="https://giphy.com/embed/2KZ2v2vifTGTvGg1fu/video" style="left:0;position:absolute;top:0" width="100%"></iframe></div></div></div>
-    </div>
-    <div class="contact__child">
-      <h1 class="contact__big" > <a class="contact__link" href="mailto:info@enriqueteruel.com">info@enriqueteruel.com</a> </h1>
-      <h1 class="contact__big"> <a class="contact__link" href="tel:+34639880551">+34 639880551</a></h1>
-      <h1 class="contact__big">9:00–5:00p.m. CEST</h1>
-    </div>
-  </section>
+  <div class="contact__child">
+    <h1 class="contact__big">
+      <app-title [title]="title"></app-title>
+    </h1>
+    <div class="mt-5">
+    <h1 class="contact__big">
+      <a class="link" href="mailto:info@enriqueteruel.com">info@enriqueteruel.com</a>
+    </h1>
+    <h1 class="contact__big">
+      <a class="link" href="tel:+34639880551">+34 639880551</a>
+    </h1>
+    <h1 class="contact__big">9:00–5:00p.m. CEST</h1>
+  </div>
+  </div>
+  <img class="contact__child" src="assets/solutions/s1.jpg" />
 </div>

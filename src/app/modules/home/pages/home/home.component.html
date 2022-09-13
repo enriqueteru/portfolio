@@ -1,32 +1,31 @@
-<app-banner [color]="'white'"
-  ><app-title
-    [title]="'Impulsamos a tu negocio hacia la transformación digital'"
-  ></app-title>
-</app-banner>
+
 
 <div class="big-wrapper big-wrapper--black">
-  <img src="" alt="" />
+  <div></div>
   <app-floating>
     <p class="subtitle subtitle--white">
-      Aplicamos las mejores prácticas en el desarrollo de proyectos a medida.
+      Un equipo especializado en el desarrollo web, interfaces y aplicaciones móviles, identidad de marca y creación de startups.
     </p>
   </app-floating>
   <div class="big-wrapper__img">
-    <img src="assets/img/code.jpg" alt="" />
+
   </div>
   <app-title
     [color]="'white'"
     [title]="
-      'Creamos aplicaciones, webs y experiencias digitales para tus clientes'
+      'No solo hacemos desarrollo, sino que vivimos y respiramos cada proyecto como si fuera nuestro.'
     "
   ></app-title>
 </div>
 
 <app-banner [color]="'white'"
-  ><app-title [title]="'Conecta'"></app-title>
+  >
   <div class="t-cols">
     <div class="t-cols__parraf" *ngFor="let i of info">
-      <p>{{ i.describe }}</p>
+      <p [innerHTML]="i.describe"></p>
+      <ul>
+        <li *ngFor="let item of i.list"> {{item}}</li>
+      </ul>
     </div>
   </div>
 </app-banner>

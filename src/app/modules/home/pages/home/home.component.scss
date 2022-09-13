@@ -1,16 +1,19 @@
 @import "/src/styles/responsive";
 @import "/src/styles/utils";
+@import "/src/styles/skeleton";
 
 .big-wrapper {
   position: relative;
-  height: 110vh;
+  height: auto;
+  padding: var(--global-padding-xs);
+  padding-top: 5em;
+  padding-bottom: 5em;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   flex-wrap: nowrap;
   overflow-y: visible;
-  padding: var(--global-padding-xs);
   &__img {
     display: flex;
     justify-content: start;
@@ -18,12 +21,13 @@
 
     img {
       width: 100%;
-      padding: var(--global-padding-xs);
     }
   }
 
   @include medium {
-    height: 140vh;
+    padding: var(--global-padding-xl);
+    padding-top: 15em;
+    padding-bottom: 15em;
     img {
       width: 80%;
     }
@@ -32,6 +36,8 @@
   @include large {
     justify-content: space-between;
     padding: var(--global-padding-xl);
+    padding-top: 25em;
+    padding-bottom: 25em;
 
     img {
       width: 50%;
@@ -47,36 +53,56 @@
 .t-cols {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
   flex-direction: column;
   flex-wrap: nowrap;
   height: auto;
   width: 100%;
-  gap: 5vw;
+  gap: 1vw;
 
   &__parraf {
-    margin: 50px 0;
-    padding: 0 15%;
+    font-family: var(--main-font);
+    margin: 30px 0;
 
-    p {
-      font-family: var(--main-font);
+    p{
+      font-size: 1.6em;
+      font-weight: 300;
+      width: 60%;
+    }
+
+    ul {
+      margin-top: 10px;
+      list-style: none;
+      padding-top: 20px;
       font-size: 1.3em;
-      font-weight: 100;
+      font-weight: 300;
+      li {
+        padding: 10px 0;
+      }
     }
   }
 
   @include medium {
+    align-items: center;
     flex-direction: column;
-    gap: 2vw;
 
     &__parraf {
+      align-items: flex-start;
       margin: 50px 0;
-      padding: 0 10%;
 
       p {
-        font-family: var(--main-font);
         font-size: 1.6em;
-        font-weight: 100;
+        font-weight: 400;
+      }
+
+      ul {
+        list-style: none;
+        padding-top: 20px;
+        font-size: 1.6em;
+        font-weight: 300;
+        li {
+
+        }
       }
     }
   }
@@ -86,10 +112,9 @@
     gap: 2vw;
 
     &__parraf {
-      padding: 0 5%;
-
       &:first-child {
-        margin-top: -50px;
+        font-size: 35px;
+        margin-top: -20px;
       }
       &:last-child {
         margin-top: 100px;

@@ -1,15 +1,54 @@
 <footer class="footer">
-  <div>
-    <p>Enrique Teruel Gutiérrez</p>
+  <div class="footer__info">
+    <p class="footer__info--general">
+      Enrique Teruel Gutiérrez, Todos los derechos reservados -
+      <span> {{ today }}</span>
+    </p>
+    <span class="footer__info--tech"
+      >Este portfolio está creado con Angular, Typescript, NodeJS, Sequelize,
+      MySQL, Javascript, Scss</span
+    >
+    <span *ngIf="false" class="footer__info--react"
+      >Ver versión React</span
+    >
+
+
   </div>
 
   <div>
     <ul class="footer__social">
-      <li>Phone</li>
-      <li>Instagram</li>
-      <li>Facebook</li>
-      <li>LinkedIn</li>
-      <li>Tik Tok</li>
+      <a target="_blank" class="footer__social-icon" href="https://instagram.com/enriqueteru">
+        <img
+          class="footer__social-icon-img"
+          src="assets/social/ig.svg"
+          alt="Instagram"
+      /></a>
+      <a target="_blank" class="footer__social-icon" href="">
+        <img
+          class="footer__social-icon-img"
+          src="assets/social/linkedin.svg"
+          alt=""
+        />
+      </a>
+      <a target="_blank" class="footer__social-icon" href="">
+        <img
+          class="footer__social-icon-img"
+          src="assets/social/ws.svg"
+          alt=""
+        />
+      </a>
+      <a target="_blank" class="footer__social-icon" href="">
+        <img
+          class="footer__social-icon-img"
+          src="assets/social/phone.svg"
+          alt=""
+        />
+      </a>
+    </ul>
+    <ul class="footer__social">
+      <a target="_blank" [routerLink]="politicaPrivacidad">Política de privacidad</a>
+      <a target="_blank" [routerLink]="avisoLegal">Aviso legal</a>
+      <a target="_blank" [routerLink]="cookies">Cookies</a>
     </ul>
   </div>
 </footer>

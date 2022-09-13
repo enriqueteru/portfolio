@@ -8,6 +8,10 @@ import { FooterComponent } from './components/footer/footer.component';
 import { AppMenuMobileComponent } from './components/app-menu-mobile/app-menu-mobile.component';
 import { RouterModule } from '@angular/router';
 import { MarqueeComponent } from './components/marquee/marquee.component';
+import { ClientListComponent } from './components/client-list/client-list.component';
+import { SteperControllerComponent } from './components/steper-controller/steper-controller.component';
+import { SteperComponent } from './components/steper/steper.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 const c = [
   MainNavComponent,
@@ -16,11 +20,14 @@ const c = [
   FloatingComponent,
   FooterComponent,
   AppMenuMobileComponent,
-  MarqueeComponent
+  MarqueeComponent,
+  ClientListComponent,
+  SteperControllerComponent,
+  SteperComponent,
 ];
 @NgModule({
   declarations: [...c],
-  imports: [CommonModule, RouterModule],
+  imports: [CommonModule, RouterModule, FormsModule, ReactiveFormsModule],
   exports: [...c],
 })
 export class SharedModule {}

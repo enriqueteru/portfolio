@@ -1,3 +1,5 @@
+
+<div style = "display: flex; flex-direction: column; justify-content: space-between ;min-height: 100vh;">
 <app-app-menu-mobile
   [isOpen]="this.MenuState"
   (toogleMenuEmmiter)="changeMenuState($event)"
@@ -9,3 +11,4 @@
 ></app-main-nav>
 <router-outlet></router-outlet>
 <app-footer></app-footer>
+</div>
