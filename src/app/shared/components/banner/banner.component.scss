@@ -1,0 +1,29 @@
+@import "/src/styles/responsive";
+@import "/src/styles/utils";
+.banner {
+  padding: var(--global-padding-xs);
+  padding-top: 3em;
+  padding-bottom: 3em;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  overflow: hidden;
+
+
+  @include medium {
+    padding: var(--global-padding-xl);
+    padding-top: 5em;
+    padding-bottom: 5em;
+    height: auto;
+  }
+
+  @include large {
+    padding: var(--global-padding-xl);
+    padding-top: 5em;
+    padding-bottom: 5em;
+    height: auto;
+  }
+}

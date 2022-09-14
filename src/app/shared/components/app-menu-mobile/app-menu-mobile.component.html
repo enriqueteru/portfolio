@@ -1,0 +1,14 @@
+<img
+  src="assets/img/close.svg"
+  class="mobile-menu__close"
+  (click)="toogleMenu()"
+/>
+<div class="mobile-menu">
+  <div class="mobile-menu__wrapper">
+    <ul class="mobile-menu__list">
+      <li [routerLink]="item.path"  (click)="toogleMenu()" *ngFor="let item of navData">
+        {{ item.name }}
+      </li>
+    </ul>
+  </div>
+</div>

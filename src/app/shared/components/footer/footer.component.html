@@ -1,0 +1,65 @@
+<footer class="footer">
+  <div class="footer__info">
+    <p class="footer__info--general">
+      Enrique Teruel Gutiérrez, Todos los derechos reservados -
+      <span> {{ today }}</span>
+    </p>
+    <span class="footer__info--tech"
+      >Este portfolio está creado con Angular, Typescript, NodeJS, Sequelize,
+      MySQL, Javascript, Scss</span
+    >
+    <span *ngIf="false" class="footer__info--react">Ver versión React</span>
+  </div>
+
+  <div>
+    <ul class="footer__social">
+      <a
+        target="_blank"
+        class="footer__social-icon"
+        href="https://instagram.com/enriqueteru"
+      >
+        <img
+          class="footer__social-icon-img"
+          src="assets/social/ig.svg"
+          alt="Instagram-contact"
+
+      /></a>
+      <a
+        target="_blank"
+        class="footer__social-icon"
+        href="https://www.linkedin.com/company/enriqueteru/"
+      >
+        <img
+          class="footer__social-icon-img"
+          src="assets/social/linkedin.svg"
+          alt="linkedin-contact"
+        />
+      </a>
+      <a
+        target="_blank"
+        class="footer__social-icon"
+        href="https://api.whatsapp.com/send?phone=34639880551&text=Hola%2C%20estaba%20interesado%20en%20presupuestar%20una%20app%2C%20web%2C%20branding..."
+      >
+        <img
+          class="footer__social-icon-img"
+          src="assets/social/ws.svg"
+          alt="whatsapp-contact"
+        />
+      </a>
+      <a target="_blank" class="footer__social-icon" href="tel:+34639880551">
+        <img
+          class="footer__social-icon-img"
+          src="assets/social/phone.svg"
+          alt="phone-contact"
+        />
+      </a>
+    </ul>
+    <ul class="footer__social">
+      <a target="_blank" [routerLink]="politicaPrivacidad"
+        >Política de privacidad</a
+      >
+      <a target="_blank" [routerLink]="avisoLegal">Aviso legal</a>
+      <a target="_blank" [routerLink]="cookies">Cookies</a>
+    </ul>
+  </div>
+</footer>

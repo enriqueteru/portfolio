@@ -1,0 +1,47 @@
+/**
+* Links Effects
+**/
+
+.link {
+  padding: 10px 0 ;
+  text-decoration: none;
+  color: black;
+  transition: 350ms;
+  width: auto;
+  overflow: hidden;
+  position: relative;
+  display: inline-block;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    left: 0;
+  }
+  &::before {
+    background-color: var(--black-color);
+    height: 2px;
+    bottom: 0;
+    transform-origin: 100% 50%;
+    transform: scaleX(0);
+    transition: transform 0.3s cubic-bezier(0.76, 0, 0.24, 1);
+  }
+
+  &:hover::before {
+    transform-origin: 0% 50%;
+    transform: scaleX(1);
+  }
+}
+
+/**
+*
+**/
+
+.mt-5 {
+  margin: 50px 0;
+}
+
+
+ul{
+  list-style: none;
+}

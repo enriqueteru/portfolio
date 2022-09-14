@@ -1,0 +1,137 @@
+@import "/src/styles/responsive";
+@import "/src/styles/utils";
+
+* {
+  font-family: var(--main-font);
+}
+
+.banner__main {
+  height: auto;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-direction: column;
+  gap: 8em;
+  margin: 25px 0;
+  text-align: center;
+}
+
+.info-block {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  margin: 2em 0;
+  gap: 3em;
+  padding: var(--global-padding-xs);
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+
+  &__heading {
+    flex: 1 1 auto;
+    font-size: 45px;
+    font-weight: 100;
+    width: 100%;
+
+    @include medium {
+      width: 50%;
+    }
+
+    @include large {
+      width: 60%;
+      margin-right: 110px;
+    }
+  }
+
+  &__subheading {
+    font-size: 30px;
+    font-weight: 500;
+    width: 100%;
+    margin-bottom: 1em;
+  }
+  &__wrapper {
+    flex: 1 1.2 auto;
+    display: flex;
+    gap: 3em;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    font-size: 25px;
+    font-weight: 100;
+    line-height: 1.5em;
+
+    @include medium {
+      flex-direction: row;
+    }
+
+    @include large {
+      flex-direction: row;
+    }
+  }
+
+  &__column {
+    flex: 1 1 auto;
+  }
+
+  @include medium {
+    flex-direction: column;
+  }
+
+  @include large {
+    img {
+      width: 50%;
+      height: auto;
+      margin: 50px 0;
+    }
+    flex-direction: row;
+    gap: 2em;
+    padding: var(--global-padding-xl);
+  }
+}
+
+.solution {
+  padding: var(--global-padding-xs);
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  font-size: 20px;
+  max-width: 100%;
+  margin: 2em 0;
+
+  @include medium {
+    justify-content: flex-start;
+  }
+
+  @include large {
+    justify-content: space-around;
+  }
+
+  &__card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+  }
+  &__img {
+    max-width: 70px;
+    width: 70px;
+    height: auto;
+    filter: brightness(-10%);
+    margin: 15px;
+  }
+  &__title {
+    font-size: 0px;
+    font-weight: 100;
+  }
+
+  &__banner {
+    object-fit: contain;
+    transform-origin: center;
+    width: 100%;
+  }
+}

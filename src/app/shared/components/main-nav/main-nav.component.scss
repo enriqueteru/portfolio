@@ -1,0 +1,57 @@
+@import "/src/styles/responsive";
+@import "/src/styles/utils";
+
+.nav {
+  font-family: var(--main-font);
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px;
+  &__logo {
+    width: 25px;
+  }
+
+  &__items-large {
+    display: none;
+  }
+  &__hamburger {
+    display: block;
+    width: 25px;
+    transition: 300ms;
+  }
+
+  @include medium {
+    &__logo {
+      width: 30px;
+    }
+    &__items-large {
+      display: none;
+    }
+    &__hamburger {
+      display: block;
+      width: 30px;
+      transition: 300ms;
+    }
+  }
+
+  @include large {
+    padding: 20px 140px;
+
+    &__logo {
+      width: 30px;
+    }
+    &__items-large {
+      display: inline-flex;
+      gap: 30px;
+      list-style: none;
+      li {
+        padding: 10px;
+      }
+    }
+    &__hamburger {
+      display: none;
+      transition: 300ms;
+    }
+  }
+}

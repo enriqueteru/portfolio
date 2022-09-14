@@ -1,0 +1,19 @@
+<app-banner class="resource-wrapper" [color]="'white'"
+  ><app-title [title]="'Proyectos'"></app-title>
+</app-banner>
+
+<div class="grid-gallery">
+  <a
+    *ngFor="let proyect of proyects"
+    class="grid-gallery__item skeleton"
+    routerLink="{{ proyect.id }}"
+  >
+    <div
+      class="grid-gallery__item"
+      [ngStyle]="{
+        background: 'url(' + proyect.coverImg + ') no-repeat 0 0 / cover'
+      }"
+    >
+    </div>
+  </a>
+</div>

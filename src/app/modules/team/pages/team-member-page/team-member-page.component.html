@@ -1,0 +1,34 @@
+<div class="team-member-page">
+  <div class="team-member-page__wrapper">
+    <img
+      class="team-member-page__user"
+      src="{{ user.img }}"
+      alt="{{ user.name }}"
+    />
+    <div class="team-member-page__info-block">
+      <h1 class="team-member-page__title">{{ this.user.name }}</h1>
+      <p class="team-member-page__info">{{ user.job }}</p>
+      <p class="team-member-page__description">{{ user.description }}</p>
+      <div class="team-member-page__social">
+        <a target="_blank" href="{{ this.setUrl(this.user.linkedin) }}">
+          <img
+            class="team-member-page__social-icon"
+            src="/assets/social/linkedin.svg"
+            alt="linkedin"
+        /></a>
+        <a target="_blank" href="{{ this.setUrl(this.user.github) }}">
+          <img
+            class="team-member-page__social-icon"
+            src="/assets/social/github.png"
+            alt="github"
+        /></a>
+        <a target="_blank" href="{{ this.setEmail(this.user.email) }}">
+          <img
+            class="team-member-page__social-icon"
+            src="/assets/social/email.png"
+            alt="email"
+        /></a>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,30 @@
+@import "/src/styles/responsive";
+@import "/src/styles/utils";
+
+.floating {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  top: 0px;
+  right: 0px;
+  background-color: var(--black-color);
+  width: 100%;
+  height: auto;
+  padding: var(--global-padding-xs);
+  display: none;
+
+  @include medium {
+    background-color: var(--black-color);
+    padding: var(--global-padding-xl);
+    width: 70%;
+    height: auto;
+  }
+
+  @include large {
+    width: 40%;
+    height: auto;
+    padding: var(--global-padding-xl);
+  }
+}
