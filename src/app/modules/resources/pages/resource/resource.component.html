@@ -1,23 +1,30 @@
-
-
-<div [style.background-image]="backgroundImg" class="skeleton proyect__banner"></div>
+<div
+  [style.background-image]="backgroundImg"
+  class="skeleton proyect__banner"
+></div>
 
 <section class="proyect">
-
   <div class="proyect__child">
     <h3 class="proyect__title">{{ proyect.name }}</h3>
     <h3 class="proyect__client">{{ proyect.client }}</h3>
+
   </div>
 
   <div class="proyect__child">
     <h4 class="proyect__subtitle">{{ proyect.categorie }}</h4>
     <p class="proyect__description">{{ proyect.description }}</p>
     <p class="proyect__description" [innerHTML]="proyect.content"></p>
+    <a class="proyect__web link" target="_blank" href="{{ proyect.web }}" >
+      Visitar proyecto
+   </a>
   </div>
-
 </section>
 
-
-<section class="gallery" >
- <img *ngFor="let image of this.gallery, let i = index " class="gallery__img" src="{{image}}" alt="isio_{{i}}">
+<section class="gallery">
+  <img
+    *ngFor="let image of this.gallery; let i = index"
+    class="gallery__img"
+    src="{{ image }}"
+    alt="isio_{{ i }}"
+  />
 </section>

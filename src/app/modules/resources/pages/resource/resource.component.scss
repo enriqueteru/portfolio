@@ -1,12 +1,42 @@
 @use "/src/styles/skeleton";
 @use "/src/styles/responsive";
+@use "/src/styles/utils";
+
+// Responsive mixins
+// Material Design breakpoints
+
+@mixin small {
+  @media only screen and (min-width: 600px) {
+    @content;
+  }
+}
+
+@mixin medium {
+  @media only screen and (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin large {
+  @media only screen and (min-width: 1440px) {
+    @content;
+  }
+}
 
 .proyect {
   font-family: var(--main-font);
-  padding: var(--global-padding-xl);
+  padding: var(--global-padding-xs);
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
+  flex-direction: column;
+
+
+  @include medium{
+    padding: var(--global-padding-xl);
+    flex-direction: row;
+  }
+
 
   &__banner {
     width: 100vw;
@@ -14,13 +44,28 @@
     background-image: none;
     background-position: center;
     background-size: cover;
+
     background-repeat: no-repeat;
   }
+
 
   &__title {
     font-size: 40px;
     font-weight: 600;
   }
+
+  &__web {
+    font-size: 25px;
+    font-weight: 600;
+    text-decoration: none;
+    color: black;
+    width: max-content;
+    &:hover{
+      color: black;
+
+    }
+  }
+
   &__client {
     font-size: 25px;
     font-weight: 100;
@@ -36,6 +81,7 @@
     margin-bottom: 1em;
   }
   &__child {
+
     display: flex;
     flex-direction: column;
     flex: 1 1;
@@ -43,11 +89,18 @@
 }
 
 .gallery {
+  margin-top: 3em;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 2em;
+
+  @include large {
+    margin-top: 5em;
+  }
+
+
   &__img {
     width: 80vw;
   }
