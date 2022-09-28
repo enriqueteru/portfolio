@@ -1,14 +1,19 @@
 
-<div style = "display: flex; flex-direction: column; justify-content: space-between ;min-height: 100vh;">
+<div style = "display: flex; flex-direction: column; justify-content: space-between ;min-height: 100vh; height: auto">
 <app-app-menu-mobile
   [isOpen]="this.MenuState"
   (toogleMenuEmmiter)="changeMenuState($event)"
   *ngIf="this.MenuState"
 ></app-app-menu-mobile>
+
 <app-main-nav
   [isOpen]="this.MenuState"
   (toogleMenuEmmiter)="changeMenuState($event)"
 ></app-main-nav>
+<app-emojis-mad-pusher>
 <router-outlet></router-outlet>
+</app-emojis-mad-pusher>
 <app-footer></app-footer>
-</div>
+
+
+

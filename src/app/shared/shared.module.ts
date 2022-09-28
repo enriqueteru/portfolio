@@ -12,6 +12,8 @@ import { ClientListComponent } from './components/client-list/client-list.compon
 import { SteperControllerComponent } from './components/steper-controller/steper-controller.component';
 import { SteperComponent } from './components/steper/steper.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ScrollerGalComponent } from './components/scroller-gal/scroller-gal.component';
+import { EmojisMadPusherComponent } from './components/emojis-mad-pusher/emojis-mad-pusher.component';
 
 const c = [
   MainNavComponent,
@@ -24,9 +26,11 @@ const c = [
   ClientListComponent,
   SteperControllerComponent,
   SteperComponent,
+  ScrollerGalComponent,
+  EmojisMadPusherComponent
 ];
 @NgModule({
-  declarations: [...c],
+  declarations: [...c, ScrollerGalComponent, EmojisMadPusherComponent],
   imports: [CommonModule, RouterModule, FormsModule, ReactiveFormsModule],
   exports: [...c],
 })

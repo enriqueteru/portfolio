@@ -1,18 +1,23 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
-import { dataHome } from 'src/app/core/schema/data';
+import { dataHome, proyect } from 'src/app/core/schema/data';
+import { ServerService } from 'src/app/core/service/server.service';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent implements OnInit {
-  @ViewChild('clients') MyProp?: ElementRef;
+
+  proyects: proyect[] = [];
+
+
+  constructor(private _ss: ServerService) {
+    this._ss.getProyects().subscribe(data => this.proyects = data.proyects)
+
+  }
 
   ngOnInit() {
-    this.MyProp?.nativeElement.scrollIntoView({
-      behavior: 'smooth',
-      block: 'start',
-    });
+
   }
 
   info: dataHome[] = [

@@ -1,19 +1,10 @@
 
 
 <div class="big-wrapper big-wrapper--black">
-  <div></div>
-  <app-floating>
-    <p class="subtitle subtitle--white">
-      Un equipo especializado en el desarrollo web, interfaces y aplicaciones móviles, identidad de marca y creación de startups.
-    </p>
-  </app-floating>
-  <div class="big-wrapper__img">
-
-  </div>
   <app-title
     [color]="'white'"
     [title]="
-      'No solo hacemos desarrollo, sino que vivimos y respiramos cada proyecto como si fuera nuestro.'
+      'No solo hacemos desarrollo, sino que vivimos y respiramos cada proyecto.'
     "
   ></app-title>
 </div>
@@ -29,3 +20,8 @@
     </div>
   </div>
 </app-banner>
+
+<div class="relative">
+<app-scroller-gal [data]="proyects"></app-scroller-gal>
+</div>
+

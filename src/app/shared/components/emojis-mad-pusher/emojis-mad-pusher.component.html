@@ -1,0 +1,7 @@
+<div class="emojis-mad noselect"  (click)="doMagic()" (mousemove)="mouseMoved($event)" >
+<span class="emoji noselect tada animated" [ngStyle]="{ position: 'absolute', top: stamp.y + 'px', left: stamp.x + 'px', height: '50px' }" *ngFor="let stamp of stamps" >{{stamp.emoji}}</span>
+<ng-content #emois panel></ng-content>
+
+
+
+</div>

@@ -7,7 +7,7 @@ import { resApiResource, resApiResources, resApiResourcesgallery, resApiUser, re
 })
 export class ServerService {
 
-  api: string = 'http://localhost:8000/api/';
+  api: string = 'https://backend.enriqueteruel.com/api/';
 
   constructor(private _http: HttpClient) {}
 
