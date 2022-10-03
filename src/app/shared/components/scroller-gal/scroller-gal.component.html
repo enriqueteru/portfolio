@@ -1,14 +1,15 @@
-
-
-
 <div class="container">
-
-	<div class="gallery">
-
-		<div  class="gallery-item"  *ngFor="let item of data"  routerLink="/proyectos/{{ item.id }}">
-			<img class="gallery-image"  src="{{ item.coverImg }}" alt="{{item.name}}">
-		</div>
-
-	</div>
-
+  <div class="gallery">
+    <div
+      class="gallery-item"
+      *ngFor="let item of data"
+      routerLink="/proyectos/{{ item.id }}"
+    >
+      <img
+        class="gallery-image"
+        src="{{ item.coverImg }}"
+        alt="{{ item.name }}"
+      />
+    </div>
+  </div>
 </div>

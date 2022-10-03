@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
@@ -7,6 +7,16 @@ import { Router } from '@angular/router';
   styleUrls: ['./emojis-mad-pusher.component.scss'],
 })
 export class EmojisMadPusherComponent implements OnInit {
+
+ESCAPE_KEYCODE = 27;
+MSG_ALERT = ''
+
+@HostListener('document:keydown', ['$event']) onKeydownHandler(event: KeyboardEvent) {
+    if (event.keyCode === this.ESCAPE_KEYCODE) {
+        this.stamps = []
+        this.MSG_ALERT = ''
+    }
+}
   x: number = 0;
   y: number = 0;
   stamps: any = [];
@@ -108,7 +118,7 @@ export class EmojisMadPusherComponent implements OnInit {
     });
   }
 
-  ngOnInit(): void {}
+  ngOnInit(): void { }
 
   mouseMoved(event: MouseEvent) {
     this.x = event.pageX - 50;
@@ -120,14 +130,28 @@ export class EmojisMadPusherComponent implements OnInit {
   }
 
   doMagic() {
+
     let position = {
       x: this.x,
       y: this.y,
       emoji: '',
     };
+
     position.emoji = this.emojis[this.randomStiker(0, this.emojis.length)];
     this.stamps = [...this.stamps, position];
-    console.log(this.stamps);
+
+    if(this.stamps.length  >= 9){
+      this.MSG_ALERT = 'Pulsa "esc" para borrar los emojis'
+      setTimeout(()=> this.MSG_ALERT = '', 10000)
+    }
     return this.stamps;
   }
+
+  keyPress(event: KeyboardEvent) {
+
+      console.log(event);
+
+  }
+
+
 }

@@ -47,6 +47,9 @@
     li {
       margin: 30px 0;
       text-decoration: none;
+      &:hover{
+        cursor: pointer;
+      }
     }
   }
 
@@ -57,6 +60,9 @@
       li {
         margin: 30px 0;
         text-decoration: none;
+        &:hover{
+          cursor: pointer;
+        }
       }
     }
   }
