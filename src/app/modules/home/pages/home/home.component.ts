@@ -6,18 +6,11 @@ import { ServerService } from 'src/app/core/service/server.service';
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss'],
 })
-export class HomeComponent implements OnInit {
-
+export class HomeComponent {
   proyects: proyect[] = [];
 
-
   constructor(private _ss: ServerService) {
-    this._ss.getProyects().subscribe(data => this.proyects = data.proyects)
-
-  }
-
-  ngOnInit() {
-
+    this._ss.getProyects().subscribe((data) => (this.proyects = data.proyects));
   }
 
   info: dataHome[] = [

@@ -1,8 +1,8 @@
 <div class="container">
-  <div class="team-card" *ngFor="let team of teamStaff; let i">
+  <div class="team-card no-sticker" *ngFor="let team of teamStaff; let i">
     <img
       routerLink="{{ team.id }}"
-      class="team-card__changer skeleton"
+      class="team-card__changer skeleton no-sticker"
       src="{{ team.img }}"
       alt="{{ team.name }}"
     />

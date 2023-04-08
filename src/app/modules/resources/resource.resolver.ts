@@ -1,8 +1,7 @@
 import { Injectable } from '@angular/core';
 import {
   Resolve,
-  ActivatedRouteSnapshot,
-  RouterStateSnapshot,
+  ActivatedRouteSnapshot
 } from '@angular/router';
 import { Observable } from 'rxjs';
 import { resApiResource} from 'src/app/core/schema/data';
@@ -14,7 +13,6 @@ export class ResourceResolverService implements Resolve<resApiResource> {
 
   resolve(
     route: ActivatedRouteSnapshot,
-    state: RouterStateSnapshot
   ): Observable<resApiResource> {
     const searchTerm: string = route.paramMap.get('id')!;
     return this._ss.getProyect(Number(searchTerm));
