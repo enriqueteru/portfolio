@@ -1,5 +1,3 @@
-
-
 <div class="big-wrapper big-wrapper--black">
   <app-title
     [color]="'white'"
@@ -9,19 +7,17 @@
   ></app-title>
 </div>
 
-<app-banner [color]="'white'"
-  >
+<app-banner [color]="'white'">
   <div class="t-cols">
     <div class="t-cols__parraf" *ngFor="let i of info">
       <p [innerHTML]="i.describe"></p>
       <ul>
-        <li *ngFor="let item of i.list"> {{item}}</li>
+        <li *ngFor="let item of i.list">{{ item }}</li>
       </ul>
     </div>
   </div>
 </app-banner>
 
 <div class="relative">
-<app-scroller-gal [data]="proyects"></app-scroller-gal>
+  <app-scroller-gal [data]="proyects"></app-scroller-gal>
 </div>
-

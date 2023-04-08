@@ -1,4 +1,5 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, ElementRef, Input, OnInit } from '@angular/core';
+import { AnimationService } from '../../services/animate.service';
 
 @Component({
   selector: 'app-title',
@@ -8,7 +9,10 @@ import { Component, Input, OnInit } from '@angular/core';
 export class TitleComponent implements OnInit {
   @Input() title: string = 'This is a title';
   @Input() color: string = 'black';
-  constructor() {}
 
-  ngOnInit(): void {}
+  constructor(private _as: AnimationService, private elementRef: ElementRef) {}
+
+  ngOnInit(): void {
+    this._as.animateDown(this.elementRef, '.title-animate');
+  }
 }

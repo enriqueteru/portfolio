@@ -1,6 +1,15 @@
-
-<div class="steper-controller">
-  <button class="steper-controller__button" (click)="setPreviousStep(this.previousStep!)">Previous</button>
-  <div class="steper-controller__item"></div>
-  <button class="steper-controller__button" (click)="setNextStep(this.previousStep!)">Next</button>
+<div class="steper-controller no-sticker">
+  <button
+    class="steper-controller__button no-sticker"
+    (click)="setPreviousStep(this.previousStep!)"
+  >
+    Anterior
+  </button>
+  <div class="steper-controller__item no-sticker"></div>
+  <button
+    class="steper-controller__button no-sticker"
+    (click)="setNextStep(this.previousStep!)"
+  >
+    Siguiente
+  </button>
 </div>
