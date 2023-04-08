@@ -2,6 +2,16 @@
 @import "/src/styles/utils";
 @import "/src/styles/skeleton";
 
+#bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -1;
+  object-fit: cover
+}
+
 .big-wrapper {
   position: relative;
   height: auto;
@@ -13,7 +23,8 @@
   justify-content: center;
   align-items: center;
   flex-wrap: nowrap;
-  overflow-y: visible;
+  overflow-y: hidden;
+  overflow-x: hidden;
   &__img {
     display: flex;
     justify-content: start;
@@ -45,7 +56,8 @@
   }
 
   &--black {
-    background-color: black;
+    background: rgba(0, 0, 0, 1);
+
   }
 }
 

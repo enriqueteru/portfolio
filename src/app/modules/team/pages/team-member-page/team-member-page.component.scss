@@ -4,6 +4,8 @@
 .team-member-page {
   font-family: var(--main-font);
   height: auto;
+  overflow-x: hidden;
+  overflow-y: hidden;
 
 
 &__social{

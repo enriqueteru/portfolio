@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit } from '@angular/core';
 import { solution } from 'src/app/core/schema/data';
+import { AnimationService } from 'src/app/shared/services/animate.service';
 
 @Component({
   selector: 'app-solutions',
@@ -8,9 +9,7 @@ import { solution } from 'src/app/core/schema/data';
 })
 export class SolutionsComponent implements OnInit {
   title: string = ' Soluciones para tu negocio';
-
   solutions: solution[] = [
-
     {
       name: 'css3',
       path: '/assets/solutions/css3.svg',
@@ -49,7 +48,27 @@ export class SolutionsComponent implements OnInit {
       path: '/assets/solutions/webpack.svg',
     },
   ];
-  constructor() {}
 
-  ngOnInit(): void {}
+  constructor(private _as: AnimationService, private elementRef: ElementRef) {}
+
+  ngOnInit(): void {
+    setTimeout(() => this.animate(), 350);
+  }
+
+  animate() {
+    this._as.animateTechs(this.elementRef);
+    this._as.animateAppear(this.elementRef, '.appear');
+
+    setTimeout(() => {
+      this._as.animateDown(this.elementRef, '.appear2');
+    }, 1000);
+    this._as.animateAppear(this.elementRef, '.appear3');
+  }
+
+  onMouseEnter(event: MouseEvent) {
+    this._as.onMouseEnter(event);
+  }
+  onMouseLeave(event: MouseEvent) {
+    this._as.onMouseLeave(event);
+  }
 }

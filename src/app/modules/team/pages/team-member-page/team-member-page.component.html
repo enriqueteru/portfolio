@@ -1,15 +1,17 @@
 <div class="team-member-page">
   <div class="team-member-page__wrapper">
     <img
-      class="team-member-page__user"
+      class="team-member-page__user skeleton"
       src="{{ user.img }}"
       alt="{{ user.name }}"
     />
-    <div class="team-member-page__info-block">
-      <h1 class="team-member-page__title">{{ this.user.name }}</h1>
-      <p class="team-member-page__info">{{ user.job }}</p>
-      <p class="team-member-page__description">{{ user.description }}</p>
-      <div class="team-member-page__social">
+    <div class="team-member-page__info-block no-sticker">
+      <h1 class="team-member-page__title no-sticker">{{ this.user.name }}</h1>
+      <p class="team-member-page__info no-sticker">{{ user.job }}</p>
+      <p class="team-member-page__description no-sticker">
+        {{ user.description }}
+      </p>
+      <div class="team-member-page__social no-sticker">
         <a target="_blank" href="{{ this.setUrl(this.user.linkedin) }}">
           <img
             class="team-member-page__social-icon"

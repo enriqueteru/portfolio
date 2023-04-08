@@ -7,7 +7,6 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PresupuestoComponent implements OnInit {
   StepConfig: any;
-  constructor() { }
 
   ngOnInit(): void {
     this.StepConfig = [

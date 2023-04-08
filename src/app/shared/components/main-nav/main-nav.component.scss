@@ -10,6 +10,12 @@
   padding: 25px;
   &__logo {
     width: 25px;
+    transition: 300ms;
+    &:hover{
+      cursor: pointer;
+      transform: scale(1.2);
+      transition: 300ms;
+    }
   }
 
   &__items-large {

@@ -6,109 +6,36 @@ import { Router } from '@angular/router';
   templateUrl: './emojis-mad-pusher.component.html',
   styleUrls: ['./emojis-mad-pusher.component.scss'],
 })
-export class EmojisMadPusherComponent implements OnInit {
-
-ESCAPE_KEYCODE = 27;
-MSG_ALERT = ''
-
-@HostListener('document:keydown', ['$event']) onKeydownHandler(event: KeyboardEvent) {
-    if (event.keyCode === this.ESCAPE_KEYCODE) {
-        this.stamps = []
-        this.MSG_ALERT = ''
-    }
-}
+export class EmojisMadPusherComponent {
+  ESCAPE_KEYCODE = 'Escape';
+  MSG_ALERT = '';
   x: number = 0;
   y: number = 0;
   stamps: any = [];
   emojis: any = [
-    '😀',
-    '😃',
-    '😄',
+    '🦏',
     '😁',
-    '😆',
-    '😅',
-    '😂',
-    '🤣',
-    '😇',
-    '😉',
-    '😊',
-    '🙂',
     '🙃',
     '😋',
     '😌',
     '😍',
-    '🥰',
-    '😘',
-    '😗',
-    '😙',
-    '😚',
-    '🥲',
-    '🤪',
-    '🥺',
-    '😣',
-    '😖',
-    '😫',
-    '😩',
-    '🥱',
-    '😪',
-    '😮‍💨',
-    '😮',
-    '😱',
-    '😨',
-    '😰',
-    '😥',
-    '😓',
-    '😯',
-    '😦',
-    '😧',
-    '🥹',
-    '😢',
-    '😭',
-    '🤤',
-    '🤩',
-    '😵',
-    '😵‍💫',
-    '🥴',
-    '😲',
-    '🤯',
-    '🫠',
-    '😈',
-    '🎃',
-    '😺',
-    '😸',
-    '😹',
     '😻',
-    '🫶',
-    '👐',
-    '🤲',
-    '🙌',
-    '👍',
-    '👊',
-    '✊',
-    '🤛',
-    '🤜',
-    '🤞',
     '🫰',
-    '🤘',
     '🤟',
     '👌',
     '🤌',
-    '🤏',
-    '👈',
-    '🫳',
-    '🫴',
-    '👉',
-    '👆',
-    '👇',
-    '✋',
-    '🤚',
-    '🖐',
     '🖖',
-    '👋',
     '🤙',
-    '🫲',
-    '🫱',
   ];
+
+  @HostListener('document:keydown', ['$event'])
+  onKeydownHandler(event: KeyboardEvent) {
+    const ESCAPE_KEY = 'Escape';
+    if (event.key === ESCAPE_KEY) {
+      this.stamps = [];
+      this.MSG_ALERT = '';
+    }
+  }
 
   constructor(private router: Router) {
     this.router.events.subscribe((event: any) => {
@@ -117,8 +44,6 @@ MSG_ALERT = ''
       }
     });
   }
-
-  ngOnInit(): void { }
 
   mouseMoved(event: MouseEvent) {
     this.x = event.pageX - 50;
@@ -129,8 +54,11 @@ MSG_ALERT = ''
     return Math.floor(Math.random() * (max - min + 1) + min);
   }
 
-  doMagic() {
-
+  doMagic(event: MouseEvent) {
+    const element = document.elementFromPoint(event.clientX, event.clientY);
+    if (element && element.classList.contains('no-sticker')) {
+      return;
+    }
     let position = {
       x: this.x,
       y: this.y,
@@ -140,18 +68,18 @@ MSG_ALERT = ''
     position.emoji = this.emojis[this.randomStiker(0, this.emojis.length)];
     this.stamps = [...this.stamps, position];
 
-    if(this.stamps.length  >= 9){
-      this.MSG_ALERT = 'Pulsa "esc" para borrar los emojis'
-      setTimeout(()=> this.MSG_ALERT = '', 10000)
+    // if (this.stamps.length >= 5 || this.stamps.length >= 15) {
+    //   this.MSG_ALERT = 'Pulsa "esc" para borrar los emojis';
+    //   setTimeout(() => (this.MSG_ALERT = ''), 10000);
+    // }
+
+    if (this.stamps.length >= 5) {
+      this.MSG_ALERT = 'Pulsa "esc" para borrar los emojis';
     }
     return this.stamps;
   }
 
   keyPress(event: KeyboardEvent) {
-
-      console.log(event);
-
+    console.log(event);
   }
-
-
 }

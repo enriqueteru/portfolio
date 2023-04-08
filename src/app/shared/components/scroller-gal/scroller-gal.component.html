@@ -1,12 +1,12 @@
-<div class="container">
-  <div class="gallery">
+<div class="container no-sticker">
+  <div class="gallery no-sticker">
     <div
-      class="gallery-item"
+      class="gallery-item no-sticker"
       *ngFor="let item of data"
       routerLink="/proyectos/{{ item.id }}"
     >
       <img
-        class="gallery-image"
+        class="gallery-image no-sticker"
         src="{{ item.coverImg }}"
         alt="{{ item.name }}"
       />
